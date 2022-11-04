@@ -5,19 +5,20 @@
       title="Scrum Band"
       alt="Scrum Band logo"
     />
-    <span *ngIf="!isMobileDisplay" class="sb-spacer"></span>
-    <button *ngIf="!isMobileDisplay" mat-button>Features</button>
-    <button *ngIf="!isMobileDisplay" mat-button>Open Source</button>
-    <button *ngIf="!isMobileDisplay" mat-button>Pricing</button>
+    <ng-container *ngIf="!isMobileDisplay; then menuButtons"></ng-container>
     <span class="sb-spacer"></span>
     <button mat-flat-button color="accent">Sign In</button>
   </mat-toolbar-row>
 
   <mat-toolbar-row *ngIf="isMobileDisplay">
-    <span class="sb-spacer"></span>
-    <button mat-button>Features</button>
-    <button mat-button>Open Source</button>
-    <button mat-button>Pricing</button>
+    <ng-container *ngIf="isMobileDisplay; then menuButtons"></ng-container>
     <span class="sb-spacer"></span>
   </mat-toolbar-row>
 </mat-toolbar>
+
+<ng-template #menuButtons>
+  <span class="sb-spacer"></span>
+  <button mat-button>Features</button>
+  <button mat-button>Open Source</button>
+  <button mat-button>Pricing</button>
+</ng-template>

@@ -10,6 +10,7 @@ import { MatInputModule } from "@angular/material/input";
 import { MatTooltipModule } from "@angular/material/tooltip";
 import { MatMenuModule } from "@angular/material/menu";
 import { MatListModule } from "@angular/material/list";
+import { MatGridListModule } from "@angular/material/grid-list";
 
 const components: any[] = [
   MatIconModule,
@@ -22,6 +23,7 @@ const components: any[] = [
   ReactiveFormsModule,
   MatMenuModule,
   MatListModule,
+  MatGridListModule,
 ];
 
 @NgModule({

@@ -11,7 +11,8 @@ import { BrowserModule } from "@angular/platform-browser";
 import { TranslateModule, TranslateLoader } from "@ngx-translate/core";
 import { HttpClientModule, HttpClient } from "@angular/common/http";
 import { TranslateHttpLoader } from "@ngx-translate/http-loader";
-import { SbLangSelectorComponent } from './components/sb-lang-selector/sb-lang-selector.component';
+import { SbLangSelectorComponent } from "./components/sb-lang-selector/sb-lang-selector.component";
+import { PublicModule } from "./modules/public/public.module";
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -25,6 +26,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
+    PublicModule,
     ServiceWorkerModule.register("ngsw-worker.js", {
       enabled: environment.production,
       registrationStrategy: "registerWhenStable:30000",

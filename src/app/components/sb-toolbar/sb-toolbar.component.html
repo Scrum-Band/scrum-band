@@ -7,6 +7,9 @@
     />
     <ng-container *ngIf="!isMobileDisplay; then menuButtons"></ng-container>
     <span class="sb-spacer"></span>
+
+    <sb-lang-selector></sb-lang-selector>
+
     <button mat-flat-button color="accent" title="{{ 'sign in' | translate }}">
       {{ "sign in" | translate }}
     </button>

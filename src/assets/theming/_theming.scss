@@ -18,7 +18,7 @@ $primary-light-off: mat.define-palette(mat.$grey-palette, 900, 800, 900);
 $accent-light-off: mat.define-palette(mat.$amber-palette, A200, A100, A400);
 $warn-light-off: mat.define-palette(mat.$deep-orange-palette);
 $custom-background-color: #15202b;
-$theme-light-off: mat.define-light-theme(
+$theme-light-off: mat.define-dark-theme(
   (
     color: (
       primary: $primary-light-off,

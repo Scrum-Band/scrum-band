@@ -7,6 +7,8 @@ import { PricingComponent } from "./pricing/pricing.component";
 import { FeaturesComponent } from "./features/features.component";
 import { MaterialModule } from "../material/material.module";
 import { BackgroundComponent } from "./background/background.component";
+import { FooterComponent } from './footer/footer.component';
+import { ScrumPhasesComponent } from './scrum-phases/scrum-phases.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,12 @@ import { BackgroundComponent } from "./background/background.component";
     PricingComponent,
     FeaturesComponent,
     BackgroundComponent,
+    FooterComponent,
+    ScrumPhasesComponent,
   ],
   imports: [CommonModule, PublicRoutingModule, MaterialModule],
+  exports: [
+    FooterComponent
+  ],
 })
 export class PublicModule {}

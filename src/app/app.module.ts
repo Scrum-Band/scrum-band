@@ -13,6 +13,7 @@ import { HttpClientModule, HttpClient } from "@angular/common/http";
 import { TranslateHttpLoader } from "@ngx-translate/http-loader";
 import { SbLangSelectorComponent } from "./components/sb-lang-selector/sb-lang-selector.component";
 import { PublicModule } from "./modules/public/public.module";
+import { SbLightSwitcherComponent } from './components/sb-light-switcher/sb-light-switcher.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -20,7 +21,7 @@ export function HttpLoaderFactory(http: HttpClient) {
 }
 
 @NgModule({
-  declarations: [AppComponent, SbToolbarComponent, SbLangSelectorComponent],
+  declarations: [AppComponent, SbToolbarComponent, SbLangSelectorComponent, SbLightSwitcherComponent],
   imports: [
     AppRoutingModule,
     BrowserModule,

@@ -11,6 +11,8 @@ import { MatTooltipModule } from "@angular/material/tooltip";
 import { MatMenuModule } from "@angular/material/menu";
 import { MatListModule } from "@angular/material/list";
 import { MatGridListModule } from "@angular/material/grid-list";
+import { MatCardModule } from "@angular/material/card";
+import { MatChipsModule } from "@angular/material/chips";
 
 const components: any[] = [
   MatIconModule,
@@ -24,6 +26,8 @@ const components: any[] = [
   MatMenuModule,
   MatListModule,
   MatGridListModule,
+  MatCardModule,
+  MatChipsModule,
 ];
 
 @NgModule({

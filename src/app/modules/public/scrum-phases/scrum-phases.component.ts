@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { FeaturesService } from "../features/features.service";
 
 @Component({
   selector: "sb-scrum-phases",
@@ -6,9 +7,7 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./scrum-phases.component.scss"],
 })
 export class ScrumPhasesComponent implements OnInit {
-  private features: any[] = [{ title: "" }];
-
-  constructor() {}
+  constructor(private featuresService: FeaturesService) {}
 
   ngOnInit(): void {}
 }

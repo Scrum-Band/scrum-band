@@ -15,28 +15,30 @@ import { MatCardModule } from '@angular/material/card';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 const components: any[] = [
-	ReactiveFormsModule,
-	MatIconModule,
-	MatToolbarModule,
-	MatButtonModule,
-	MatSlideToggleModule,
-	MatFormFieldModule,
-	MatInputModule,
-	MatTooltipModule,
-	MatMenuModule,
-	MatListModule,
-	MatGridListModule,
-	MatCardModule,
-	MatChipsModule,
-	MatTabsModule,
-	MatSidenavModule
+  ReactiveFormsModule,
+  MatIconModule,
+  MatToolbarModule,
+  MatButtonModule,
+  MatSlideToggleModule,
+  MatFormFieldModule,
+  MatInputModule,
+  MatTooltipModule,
+  MatMenuModule,
+  MatListModule,
+  MatGridListModule,
+  MatCardModule,
+  MatChipsModule,
+  MatTabsModule,
+  MatSidenavModule,
+  MatExpansionModule
 ];
 
 @NgModule({
-	declarations: [],
-	imports: [CommonModule, components],
-	exports: [components]
+  declarations: [],
+  imports: [CommonModule, components],
+  exports: [components]
 })
 export class MaterialModule {}

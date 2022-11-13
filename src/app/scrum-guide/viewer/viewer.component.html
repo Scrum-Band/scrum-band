@@ -4,15 +4,20 @@
       <span>{{ 'scrum-guide.intro.subtitle' | translate }}</span>
       <span class="sb-spacer"></span>
       <button mat-icon-button (click)="drawer.toggle()">
-        <mat-icon>menu</mat-icon>
+        <mat-icon>search</mat-icon>
       </button>
     </mat-toolbar-row>
   </mat-toolbar>
-  <mat-sidenav-container autosize hasBackdrop="false">
+  <mat-sidenav-container autosize hasBackdrop="true">
     <mat-sidenav #drawer mode="over" position="end" fixedInViewport fixedTopGap="128">
       <mat-action-list>
         <mat-list-item *ngFor="let link of MENU">
-          <button mat-list-item (click)="scrollTo(link.anchor); drawer.toggle()">{{ link.name | translate }}</button>
+          <button
+            [ngClass]="link.parent ? 'sb-sg-submenu' : 'sb-sg-menu'"
+            mat-list-item
+            (click)="scrollTo(link.anchor, link.parent); drawer.toggle()">
+            {{ link.name | translate }}
+          </button>
         </mat-list-item>
       </mat-action-list>
     </mat-sidenav>

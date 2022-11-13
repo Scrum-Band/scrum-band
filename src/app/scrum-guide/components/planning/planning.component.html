@@ -1,0 +1,24 @@
+<mat-card>
+  <mat-card-title>
+    {{ planning.title | translate }}
+  </mat-card-title>
+  <mat-card-content>
+    <p *ngFor="let intro of planning.intro">
+      {{ intro | translate }}
+    </p>
+    <mat-accordion>
+      <mat-expansion-panel *ngFor="let topic of planning.topics">
+        <mat-expansion-panel-header>
+          <mat-panel-title>{{ topic.title | translate }}</mat-panel-title>
+        </mat-expansion-panel-header>
+        <p *ngFor="let content of topic.content">
+          {{ content | translate }}
+        </p>
+      </mat-expansion-panel>
+    </mat-accordion>
+    <br />
+    <p *ngFor="let content of planning.content">
+      {{ content | translate }}
+    </p>
+  </mat-card-content>
+</mat-card>

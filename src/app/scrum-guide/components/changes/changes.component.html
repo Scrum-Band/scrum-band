@@ -1,12 +1,16 @@
 <!-- CHANGES -->
 <mat-card>
   <mat-card-title>
-    <h2>{{ scrumGuideChanges.title | translate }}</h2>
+    {{ scrumGuideChanges.title | translate }}
   </mat-card-title>
   <mat-card-content>
-    <div *ngFor="let change of scrumGuideChanges.changes">
-      <h3>{{ change.title | translate }}</h3>
-      <p>{{ change.content | translate }}</p>
-    </div>
+    <mat-accordion>
+      <mat-expansion-panel *ngFor="let change of scrumGuideChanges.changes">
+        <mat-expansion-panel-header>
+          <mat-panel-title>{{ change.title | translate }}</mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>{{ change.content | translate }}</p>
+      </mat-expansion-panel>
+    </mat-accordion>
   </mat-card-content>
 </mat-card>

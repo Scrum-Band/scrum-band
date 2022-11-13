@@ -8,19 +8,33 @@
       {{ intro | translate }}
     </p>
     <!-- TRANSPARENCIA -->
-    <h2>{{ scrumGuideTheory.transparency.title | translate }}</h2>
-    <p *ngFor="let content of scrumGuideTheory.transparency.content">
-      {{ content | translate }}
-    </p>
-    <!-- INSPECCION -->
-    <h2>{{ scrumGuideTheory.inspection.title | translate }}</h2>
-    <p *ngFor="let content of scrumGuideTheory.inspection.content">
-      {{ content | translate }}
-    </p>
-    <!-- ADAPTACION -->
-    <h2>{{ scrumGuideTheory.adaptation.title | translate }}</h2>
-    <p *ngFor="let content of scrumGuideTheory.adaptation.content">
-      {{ content | translate }}
-    </p>
+    <mat-accordion>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>{{ scrumGuideTheory.transparency.title | translate }}</mat-panel-title>
+        </mat-expansion-panel-header>
+        <p *ngFor="let content of scrumGuideTheory.transparency.content">
+          {{ content | translate }}
+        </p>
+      </mat-expansion-panel>
+      <!-- INSPECCION -->
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>{{ scrumGuideTheory.inspection.title | translate }}</mat-panel-title>
+        </mat-expansion-panel-header>
+        <p *ngFor="let content of scrumGuideTheory.inspection.content">
+          {{ content | translate }}
+        </p>
+      </mat-expansion-panel>
+      <!-- ADAPTACION -->
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>{{ scrumGuideTheory.adaptation.title | translate }}</mat-panel-title>
+        </mat-expansion-panel-header>
+        <p *ngFor="let content of scrumGuideTheory.adaptation.content">
+          {{ content | translate }}
+        </p>
+      </mat-expansion-panel>
+    </mat-accordion>
   </mat-card-content>
 </mat-card>

@@ -1,0 +1,32 @@
+<div class="improvements-wrapper">
+	<h2>Mejora todas las fases de tu proyecto SCRUM</h2>
+	<mat-card class="animated-box in" style="width: 80%">
+		<div class="timeline">
+			<div *ngFor="let improvement of improvements" class="timeline__event animated fadeInUp delay-3s">
+				<div class="timeline__event__icon">
+					<mat-icon>{{ improvement.icon }}</mat-icon>
+				</div>
+				<div class="timeline__event__date">{{ improvement.phase | translate }}</div>
+				<div class="timeline__event__content mat-app-background">
+					<div class="timeline__event__description">
+						<p>{{ improvement.description | translate }}</p>
+						<mat-chip-list>
+							<sb-features-chip *ngFor="let feature of improvement.features" name="{{ feature }}"></sb-features-chip>
+						</mat-chip-list>
+					</div>
+				</div>
+			</div>
+		</div>
+	</mat-card>
+	<h2>AYUDA A TODOS LOS MIEMBROS DE TU PROYECTO</h2>
+	<mat-card class="animated-box in" style="width: 80%">
+		<mat-tab-group mat-align-tabs="center">
+			<mat-tab label="Developers"> 1</mat-tab>
+			<mat-tab label="Scrum Master"> 2 </mat-tab>
+			<mat-tab label="Product Owner"> 3 </mat-tab>
+			<mat-tab label="Stakeholders"> 5</mat-tab>
+		</mat-tab-group>
+	</mat-card>
+</div>
+
+{{ 'scrum-guide.intro.authors' | translate }}

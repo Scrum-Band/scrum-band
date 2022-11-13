@@ -1,0 +1,75 @@
+<!-- ARTEFACTOS -->
+<mat-card>
+  <mat-card-title>
+    {{ scrumGuideArtifacts.title | translate }}
+  </mat-card-title>
+  <mat-card-content>
+    <p>{{ scrumGuideArtifacts.intro | translate }}</p>
+    <p>{{ scrumGuideArtifacts.commitments.title | translate }}</p>
+    <ul>
+      <li *ngFor="let content of scrumGuideArtifacts.commitments.content">
+        {{ content | translate }}
+      </li>
+    </ul>
+    <p *ngFor="let content of scrumGuideArtifacts.content">
+      {{ content | translate }}
+    </p>
+    <!-- PRODUCT BACKLOG -->
+    <mat-card>
+      <mat-card-title>
+        {{ scrumGuideArtifacts.productBacklog.title | translate }}
+      </mat-card-title>
+      <mat-card-content>
+        <p *ngFor="let intro of scrumGuideArtifacts.productBacklog.intro">
+          {{ intro | translate }}
+        </p>
+        <p>
+          {{ scrumGuideArtifacts.productBacklog.commitment.title | translate }}
+        </p>
+        <ul>
+          <li *ngFor="let content of scrumGuideArtifacts.productBacklog.commitment.content">
+            {{ content | translate }}
+          </li>
+        </ul>
+      </mat-card-content>
+    </mat-card>
+    <!-- SPRINT BACKLOG -->
+    <mat-card>
+      <mat-card-title>
+        {{ scrumGuideArtifacts.sprintBacklog.title | translate }}
+      </mat-card-title>
+      <mat-card-content>
+        <p *ngFor="let content of scrumGuideArtifacts.sprintBacklog.content">
+          {{ content | translate }}
+        </p>
+        <p>
+          {{ scrumGuideArtifacts.sprintBacklog.commitment.title | translate }}
+        </p>
+        <ul>
+          <li *ngFor="let content of scrumGuideArtifacts.sprintBacklog.commitment.content">
+            {{ content | translate }}
+          </li>
+        </ul>
+      </mat-card-content>
+    </mat-card>
+    <!-- INCREMENT -->
+    <mat-card>
+      <mat-card-title>
+        {{ scrumGuideArtifacts.increment.title | translate }}
+      </mat-card-title>
+      <mat-card-content>
+        <p *ngFor="let content of scrumGuideArtifacts.increment.content">
+          {{ content | translate }}
+        </p>
+        <p>
+          {{ scrumGuideArtifacts.increment.commitment.title | translate }}
+        </p>
+        <ul>
+          <li *ngFor="let content of scrumGuideArtifacts.increment.commitment.content">
+            {{ content | translate }}
+          </li>
+        </ul>
+      </mat-card-content>
+    </mat-card>
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,70 @@
+<mat-card>
+  <mat-card-title>
+    {{ scrumGuideTeam.title | translate }}
+  </mat-card-title>
+  <mat-card-content>
+    <p *ngFor="let intro of scrumGuideTeam.intro">
+      {{ intro | translate }}
+    </p>
+    <!-- DESARROLLADORES -->
+    <mat-card>
+      <mat-card-title>
+        {{ scrumGuideTeam.developers.title | translate }}
+      </mat-card-title>
+      <mat-card-content>
+        <p>
+          {{ scrumGuideTeam.developers.intro | translate }}
+        </p>
+        <p>
+          {{ scrumGuideTeam.developers.skills.intro | translate }}
+        </p>
+        <ul>
+          <li *ngFor="let skill of scrumGuideTeam.developers.skills.list">
+            {{ skill | translate }}
+          </li>
+        </ul>
+      </mat-card-content>
+    </mat-card>
+    <!-- PRODUCT OWNER -->
+    <mat-card>
+      <mat-card-title>
+        {{ scrumGuideTeam.po.title | translate }}
+      </mat-card-title>
+      <mat-card-content>
+        <p>
+          {{ scrumGuideTeam.po.intro | translate }}
+        </p>
+        <p>
+          {{ scrumGuideTeam.po.skills.intro | translate }}
+        </p>
+        <ul>
+          <li *ngFor="let skill of scrumGuideTeam.po.skills.list">
+            {{ skill | translate }}
+          </li>
+        </ul>
+        <p *ngFor="let content of scrumGuideTeam.po.content">
+          {{ content | translate }}
+        </p>
+      </mat-card-content>
+    </mat-card>
+    <!-- SCRUM MASTER -->
+    <mat-card>
+      <mat-card-title>
+        {{ scrumGuideTeam.sm.title | translate }}
+      </mat-card-title>
+      <mat-card-content>
+        <p *ngFor="let content of scrumGuideTeam.sm.content">
+          {{ content | translate }}
+        </p>
+        <div *ngFor="let serve of scrumGuideTeam.sm.serves">
+          <p>{{ serve.title | translate }}</p>
+          <ul>
+            <li *ngFor="let item of serve.list">
+              {{ item | translate }}
+            </li>
+          </ul>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </mat-card-content>
+</mat-card>

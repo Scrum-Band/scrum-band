@@ -1,0 +1,23 @@
+<!-- THANKS -->
+<mat-card>
+  <mat-card-title>
+    {{ scrumGuideThanks.title | translate }}
+  </mat-card-title>
+  <mat-card-content>
+    <!-- PEOPLE -->
+    <h3>{{ scrumGuideThanks.people.title | translate }}</h3>
+    <p *ngFor="let content of scrumGuideThanks.people.content">
+      {{ content | translate }}
+    </p>
+    <!-- HISTORY -->
+    <h3>{{ scrumGuideThanks.history.title | translate }}</h3>
+    <p *ngFor="let content of scrumGuideThanks.history.content">
+      {{ content | translate }}
+    </p>
+    <!-- TRANSLATORS -->
+    <h3>{{ scrumGuideThanks.translators.title | translate }}</h3>
+    <p *ngFor="let content of scrumGuideThanks.translators.content">
+      {{ content | translate }}
+    </p>
+  </mat-card-content>
+</mat-card>

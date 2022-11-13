@@ -1,0 +1,88 @@
+<!-- EVENTOS -->
+<mat-card>
+  <mat-card-title>
+    {{ scrumGuideEvents.title | translate }}
+  </mat-card-title>
+  <mat-card-content>
+    <p *ngFor="let intro of scrumGuideEvents.intro">
+      {{ intro | translate }}
+    </p>
+    <!-- SPRINT-->
+    <mat-card>
+      <mat-card-title>
+        {{ scrumGuideEvents.sprint.title | translate }}
+      </mat-card-title>
+      <mat-card-content>
+        <p *ngFor="let sprintIntro of scrumGuideEvents.sprint.intro">
+          {{ sprintIntro | translate }}
+        </p>
+        <p>
+          {{ scrumGuideEvents.sprint.list.title | translate }}
+        </p>
+        <ul>
+          <li *ngFor="let item of scrumGuideEvents.sprint.list.content">
+            {{ item | translate }}
+          </li>
+        </ul>
+        <p *ngFor="let content of scrumGuideEvents.sprint.content">
+          {{ content | translate }}
+        </p>
+      </mat-card-content>
+    </mat-card>
+    <!-- PLANNING-->
+    <mat-card>
+      <mat-card-title>
+        {{ scrumGuideEvents.planning.title | translate }}
+      </mat-card-title>
+      <mat-card-content>
+        <p *ngFor="let intro of scrumGuideEvents.planning.intro">
+          {{ intro | translate }}
+        </p>
+        <div *ngFor="let topic of scrumGuideEvents.planning.topics">
+          <h2>
+            {{ topic.title | translate }}
+          </h2>
+          <p *ngFor="let content of topic.content">
+            {{ content | translate }}
+          </p>
+        </div>
+        <p *ngFor="let content of scrumGuideEvents.planning.content">
+          {{ content | translate }}
+        </p>
+      </mat-card-content>
+    </mat-card>
+    <!-- DAILY -->
+    <mat-card>
+      <mat-card-title>
+        {{ scrumGuideEvents.daily.title | translate }}
+      </mat-card-title>
+      <mat-card-content>
+        <p *ngFor="let content of scrumGuideEvents.daily.content">
+          {{ content | translate }}
+        </p>
+      </mat-card-content>
+    </mat-card>
+    <!-- REVIEW -->
+    <mat-card>
+      <mat-card-title>
+        {{ scrumGuideEvents.review.title | translate }}
+      </mat-card-title>
+      <mat-card-content>
+        <p *ngFor="let content of scrumGuideEvents.review.content">
+          {{ content | translate }}
+        </p>
+      </mat-card-content>
+    </mat-card>
+    <!-- RETROSPECTIVE -->
+    <mat-card>
+      <mat-card-title>
+        {{ scrumGuideEvents.retrospective.title | translate }}
+      </mat-card-title>
+      <mat-card-content>
+        <p *ngFor="let content of scrumGuideEvents.retrospective.content">
+          {{ content | translate }}
+        </p>
+      </mat-card-content>
+    </mat-card>
+  </mat-card-content>
+</mat-card>

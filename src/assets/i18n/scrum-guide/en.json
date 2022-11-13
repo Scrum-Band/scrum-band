@@ -1,0 +1,303 @@
+{
+	"scrum-guide": {
+		"attribution": {
+			"title": "Guía Scrum © 2020 Ken Schwaber and Jeff Sutherland",
+			"content1": "Todos los textos de la Guía Scrum han sido extraidos de http://scrumguides.org ",
+			"content2": "Las traducciones han sido extraidas de https://scrumguides.org/download.html",
+			"content3": "La Guía Scrum se ofrece bajo licencia Creative Commons ShareAlike disponible en  http://creativecommons.org/licenses/by-sa/4.0/legalcode y descrita en t http://creativecommons.org/licenses/by-sa/4.0/"
+		},
+		"intro": {
+			"authors": "Ken Schwaber y Jeff Sutherland",
+			"title": "La Guía Scrum",
+			"subtitle": "La Guía Definitiva de Scrum: Las Reglas del Juego",
+			"version": "Noviembre 2020"
+		},
+		"purpose": {
+			"title": "Propósito de la Guía Scrum",
+			"content1": "Desarrollamos Scrum a principios de la década de 1990. Escribimos la primera versión de la Guía Scrum en 2010 para ayudar a las personas de todo el mundo a entender Scrum. Hemos evolucionado la Guía desde entonces a través de pequeñas actualizaciones funcionales. Juntos, seguimos estando detrás de ella.",
+			"content2": "La Guía Scrum contiene la definición de Scrum. Cada elemento del marco sirve a un propósito específico que es esencial para el valor global y los resultados realizados con Scrum. Cambiar el diseño o las ideas básicas de Scrum, dejar fuera los elementos, o no seguir las reglas de Scrum, cubre los problemas y limita los beneficios de Scrum, potencialmente incluso haciéndolo inútil.",
+			"content3": "Seguimos el creciente uso de Scrum dentro de un mundo complejo en constante crecimiento. Nos sentimos honrados de ver Scrum siendo adoptado en muchos dominios que tienen un trabajo esencialmente complejo, más allá del desarrollo de productos de software donde Scrum tiene sus raíces. A medida que el uso de Scrum se extiende, desarrolladores, investigadores, analistas, científicos y otros especialistas hacen el trabajo. Usamos la palabra \"desarrolladores\" en Scrum no para excluir, sino para simplificar. Si obtienes valor de Scrum, considérate incluido.",
+			"content4": "A medida que se utiliza Scrum, se pueden encontrar, aplicar e idear patrones, procesos e información que se ajusten al marco de Scrum como se describe en este documento. Su descripción está más allá del propósito de la Guía Scrum porque son sensibles al contexto y difieren ampliamente entre los usos de Scrum. Tales tácticas para su uso dentro del marco de Scrum varían ampliamente y se describen en otro lugar.",
+			"content5": "Ken Schwaber & Jeff Sutherland, Noviembre 2020",
+			"content6": "© 2020 Ken Schwaber and Jeff Sutherland",
+			"content7": "This publication is offered for license under the Attribution Share-Alike license of Creative Commons, accessible at http://creativecommons.org/licenses/by-sa/4.0/legalcode and also described in summary form at http://creativecommons.org/licenses/by-sa/4.0/. By utilizing this Scrum Guide, you acknowledge and agree that you have read and agree to be bound by the terms of the Attribution Share-Alike license of Creative Commons."
+		},
+		"definition": {
+			"title": "Definición de Scrum",
+			"intro": "Scrum es un marco ligero que ayuda a las personas, equipos y organizaciones a generar valor a través de soluciones adaptables para problemas complejos. ",
+			"resume": {
+				"title": "En pocas palabras, Scrum requiere un Scrum Master para fomentar un entorno donde:",
+				"step1": "Un propietario del producto (Product Owner) ordena el trabajo de un problema complejo en un Product Backlog.",
+				"step2": "El equipo de Scrum convierte una selección del trabajo en un Incremento de valor durante un Sprint",
+				"step3": "El equipo de Scrum y sus partes interesadas (stakeholders) inspeccionan los resultados y realizan los ajustes necesarios para el próximo Sprint.",
+				"step4": "Repetir"
+			},
+			"content1": "Scrum es simple. Pruébalo tal cual y determine si su filosofía, teoría y estructura ayudan a alcanzar metas y crear valor. El marco de Scrum es deliberadamente incompleto, solo define las partes necesarias para implementar la teoría de Scrum. Scrum se basa en la inteligencia colectiva de las personas que lo utilizan. En lugar de proporcionar a las personas instrucciones detalladas, las reglas de Scrum guían sus relaciones e interacciones.",
+			"content2": "En el marco se pueden emplear diversos procesos, técnicas y métodos. Scrum envuelve las prácticas existentes o las hace innecesarias. Scrum hace visible la eficacia relativa de la gestión actual, el entorno y las técnicas de trabajo, de modo que se pueden realizar mejoras."
+		},
+		"theory": {
+			"title": "Teoría de Scrum",
+			"intro1": "Scrum se basa en el empirismo y el pensamiento Lean. El empirismo afirma que el conocimiento proviene de la experiencia y la toma de decisiones basadas en lo que se observa. El pensamiento Lean reduce los desperdicios y se centra en lo esencial.",
+			"intro2": "Scrum emplea un enfoque iterativo e incremental para optimizar la previsibilidad y controlar el riesgo. Scrum involucra a grupos de personas que colectivamente tienen todas las habilidades y experiencia para hacer el trabajo y compartir o adquirir tales habilidades según sea necesario.",
+			"intro3": "Scrum combina cuatro eventos formales para la inspección y adaptación dentro de un evento contenedor, el Sprint. Estos eventos funcionan porque implementan los pilares empíricos de Scrum: transparencia, inspección y adaptación",
+			"transparency": {
+				"title": "Transparencia",
+				"content1": "El proceso y el trabajo emergentes deben ser visibles para aquellos que realizan el trabajo, así como para los que reciben el trabajo. Con Scrum, las decisiones importantes se basan en el estado percibido de sus tres artefactos formales. Los artefactos que tienen poca transparencia pueden conducir a decisiones que disminuyen el valor y aumentan el riesgo.",
+				"content2": "La transparencia permite la inspección. La inspección sin transparencia genera engaños y desperdicios."
+			},
+			"inspection": {
+				"title": "Inspección",
+				"content1": "Los artefactos de Scrum y el progreso hacia objetivos acordados deben ser inspeccionados con frecuencia y diligentemente para detectar varianzas o problemas potencialmente indeseables. Para ayudar con la inspección, Scrum proporciona cadencia en forma de sus cinco eventos.",
+				"content2": "La inspección permite la adaptación. La inspección sin adaptación se considera inútil. Los eventos de Scrum están diseñados para provocar cambios"
+			},
+			"adaptation": {
+				"title": "Adaptación",
+				"content1": "Si algún aspecto de un proceso se desvía fuera de los límites aceptables o si el producto resultante es inaceptable, el proceso que se está aplicando o los materiales que se producen deben ajustarse. El ajuste debe realizarse lo antes posible para minimizar la desviación adicional.",
+				"content2": "La adaptación se vuelve más difícil cuando las personas involucradas no están empoderadas o no poseen capacidad para autogestionarse. Se espera que un equipo de Scrum se adapte en el momento en que aprenda algo nuevo por medio de la inspección."
+			}
+		},
+		"values": {
+			"title": "Valores de Scrum",
+			"content1": "El uso exitoso de Scrum depende de que las personas sean más competentes en vivir cinco valores:",
+			"content2": "Compromiso, Enfoque, Apertura, Respeto y Coraje",
+			"content3": "El equipo de Scrum se compromete a lograr sus objetivos y apoyarse mutuamente. Su enfoque principal es el trabajo del Sprint para hacer el mejor progreso posible hacia estos objetivos. El equipo de Scrum y sus partes interesadas están abiertos sobre el trabajo y los desafíos. Los miembros del equipo de Scrum se respetan mutuamente para ser personas capaces e independientes, y son respetados como tales por las personas con las que trabajan. Los miembros del equipo de Scrum tienen el valor de hacer lo correcto y de trabajar en problemas complejos.",
+			"content4": "Estos valores dan dirección al equipo de Scrum con respecto a su trabajo, acciones y comportamiento.",
+			"content5": "Las decisiones que se toman, las medidas tomadas y la forma en que se utiliza Scrum deben reforzar 5 estos valores, no disminuirlos o socavarlos. Los miembros del equipo de Scrum aprenden y exploran los valores mientras trabajan con los eventos y artefactos de Scrum. Cuando estos valores son asimilados por el equipo de Scrum y las personas con las que trabajan, los pilares empíricos de Scrum de transparencia, inspección y adaptación cobran vida construyendo confianza."
+		},
+		"team": {
+			"title": "El equipo Scrum (Scrum Team)",
+			"intro1": "La unidad fundamental de Scrum es un pequeño equipo de personas, un equipo Scrum. El equipo Scrum consta de un Scrum Master, un propietario de producto (Product Owner) y desarrolladores. Dentro de un equipo de Scrum, no hay sub-equipos ni jerarquías. Es una unidad cohesionada de profesionales enfocada en un objetivo a la vez, el objetivo del Producto. ",
+			"intro2": "Los equipos de Scrum son multifuncionales, lo que significa que los miembros tienen todas las habilidades necesarias para crear valor en cada Sprint. También son autogestionados, lo que significa que internamente deciden quién hace qué, cuándo y cómo.",
+			"intro3": "El equipo de Scrum es lo suficientemente pequeño como para permanecer ágil y lo suficientemente grande como para completar un trabajo significativo dentro de un Sprint, por lo general 10 o menos personas. En general, hemos descubierto que los equipos más pequeños se comunican mejor y son más productivos. Si los equipos de Scrum se vuelven demasiado grandes, se debe considerar la posibilidad de reorganizarse en varios equipos Scrum cohesionados, cada uno centrado en el mismo producto. Por lo tanto, deben compartir el mismo objetivo de producto, trabajo pendiente del producto (Product Backlog) y propietario del producto (Product Owner) .",
+			"intro4": "El equipo Scrum es responsable de todas las actividades relacionadas con los productos, desde la colaboración, verificación, mantenimiento, operación, experimentación, investigación y desarrollo, y cualquier otra cosa que pueda ser necesaria. Están estructurados y empoderados por la organización para gestionar su propio trabajo. Trabajar en Sprints a un ritmo sostenible mejora el enfoque y la consistencia del equipo de Scrum.",
+			"intro5": "Todo el equipo de Scrum es responsable de crear un incremento valioso y útil en cada Sprint. Scrum define tres responsabilidades específicas dentro del equipo de Scrum: los desarrolladores, el propietario del producto (Product Owner) y el Scrum Master.",
+			"developers": {
+				"title": "Desarrolladores",
+				"intro": "Los desarrolladores son las personas del equipo Scrum que se comprometen a crear cualquier aspecto de un Incremento útil (funcional) en cada Sprint.",
+				"skills": {
+					"intro": "Las habilidades específicas que necesitan los desarrolladores son a menudo amplias y variarán con el dominio del trabajo. Sin embargo, los desarrolladores siempre son responsables de:",
+					"skill1": "Crear un plan para el Sprint, el Sprint Backlog;",
+					"skill2": "Inculcar la calidad adhiriéndose a una definición de Hecho;",
+					"skill3": "Adaptar su plan cada día hacia el Objetivo Sprint;",
+					"skill4": "Responsabilizarse mutuamente como profesionales."
+				}
+			},
+			"po": {
+				"title": "Propietario del producto (Product Owner)",
+				"intro": "El Propietario del Producto es responsable de maximizar el valor del producto resultante del trabajo del equipo de Scrum. La forma en que esto se hace esto puede variar ampliamente entre organizaciones, equipos Scrum e individuos.",
+				"skills": {
+					"intro": "El Propietario del Producto también es responsable de la gestión eficaz de la pila del producto (ProductBacklog), que incluye:",
+					"skill1": "Desarrollar y comunicar explícitamente el Objetivo del Producto;",
+					"skill2": "Creación y comunicación clara de elementos de trabajo pendiente del producto;",
+					"skill3": "Pedido de artículos de trabajo pendiente del producto; ",
+					"skill4": "Asegurarse de que el trabajo pendiente del producto sea transparente, visible y comprendido."
+				},
+				"content1": "El Propietario del Producto puede hacer el trabajo anterior o puede delegar la responsabilidad a otros. En cualquier caso, el propietario del producto sigue siendo responsable.",
+				"content2": "Para que los Propietarios de Productos tengan éxito, toda la organización debe respetar sus decisiones. Estas decisiones son visibles en el contenido y el orden del trabajo pendiente del producto, y a través del Incremento inspeccionable en la revisión de Sprint.",
+				"content3": "El Propietario del Producto es una persona, no un comité. El Propietario del Producto puede representar las necesidades de muchas partes interesadas en el trabajo pendiente del producto. Aquellos que deseen cambiar el trabajo pendiente del producto pueden hacerlo tratando de negociar con criterio con el Product Owner."
+			},
+			"sm": {
+				"title": "Scrum Master",
+				"content1": "El Scrum Master es responsable de establecer Scrum tal como se define en la Guía de Scrum. Lo consigue ayudando a todos a comprender la teoría y la práctica de Scrum, tanto dentro del Equipo como en toda la organización.",
+				"content2": "El Scrum Master es responsable de la efectividad del Scrum Team. Lo logra al permitir que el equipo Scrum mejore sus prácticas, dentro del marco de Scrum.",
+				"content3": "Los Scrum Masters son verdaderos líderes que sirven al equipo Scrum y a toda la organización.",
+				"serves": {
+					"team": {
+						"title": "El Scrum Master sirve al equipo de Scrum de varias maneras, incluyendo:",
+						"serve1": "Capacitar a los miembros del equipo en autogestión y multifuncionalidad;",
+						"serve2": "Ayudar al equipo de Scrum a centrarse en la creación de incrementos de alto valor que cumplan con la definición de hecho;",
+						"serve3": "Promover la eliminación de los impedimentos para el progreso del equipo Scrum;",
+						"serve4": "Asegurar de que todos los eventos de Scrum se lleven a cabo, sean positivos, productivos y que se respete el tiempo establecido (time-box) para cada uno de ellos."
+					},
+					"po": {
+						"title": "El Scrum Master sirve al Propietario del Producto (Product Owner) de varias maneras, incluyendo:",
+						"serve1": "Ayudar a encontrar técnicas para una definición eficaz de los objetivos del producto y la gestión de los retrasos en el producto;",
+						"serve2": "Ayudar al equipo de Scrum a comprender la necesidad de elementos de trabajo pendiente de productos claros y concisos;",
+						"serve3": "Ayudar a establecer la planificación empírica de productos para un entorno complejo;",
+						"serve4": "Facilitar la colaboración de las partes interesadas según sea solicitado o necesario."
+					},
+					"org": {
+						"title": "El Scrum Master sirve a la organización de varias maneras, incluyendo:",
+						"serve1": "Liderar, capacitar y mentorizar a la organización en su adopción de Scrum;",
+						"serve2": "Planificar y asesorar sobre la implementación de Scrum dentro de la organización;",
+						"serve3": "Ayudar a las personas y a las partes interesadas a comprender y promulgar un enfoque empírico para el trabajo complejo;",
+						"serve4": "Eliminar las barreras entre las partes interesadas y los equipos de Scrum."
+					}
+				}
+			}
+		}
+	},
+	"events": {
+		"title": "Eventos de Scrum",
+		"intro1": "El Sprint es un contenedor para todos los eventos. Cada evento en Scrum es una oportunidad formal para inspeccionar y adaptar los artefactos de Scrum. Estos eventos están diseñados específicamente para permitir la transparencia necesaria. Si no se realizan los eventos según lo prescrito, se pierden oportunidades para inspeccionar y adaptarse. Los eventos se utilizan en Scrum para crear regularidad y minimizar la necesidad de reuniones no definidas en Scrum.",
+		"intro2": "De manera óptima, todos los eventos se llevan a cabo al mismo tiempo y lugar para reducir la complejidad.",
+		"sprint": {
+			"title": "El Sprint",
+			"intro1": "Los sprints son el latido del corazón de Scrum, donde las ideas se convierten en valor.",
+			"intro2": "Son eventos de longitud fija de un mes o menos para crear consistencia. Un nuevo Sprint comienza inmediatamente después de la conclusión del Sprint anterior.",
+			"intro3": "Todo el trabajo necesario para alcanzar el objetivo del producto, incluyendo la Planificación (Sprint Planning), Daily Scrums, Revisión del Sprint (Sprint Review ) y la Retrospectiva (Sprint Retrospective), ocurren dentro del Sprints.",
+			"list": {
+				"title": "Durante el Sprint:",
+				"content1": "No se hacen cambios que pongan en peligro el Objetivo Sprint;",
+				"content2": "La calidad no disminuye;",
+				"content3": "El trabajo pendiente del producto se refina según sea necesario;",
+				"content4": "El alcance se puede clarificar y renegociar con el Propietario del Producto a medida que se aprende más."
+			},
+			"content1": "Los Sprints permiten la previsibilidad al garantizar la inspección y adaptación del progreso hacia un objetivo del Producto, como mínimo, una vez al mes en el calendario. Cuando el horizonte de un Sprint es demasiado largo, el Objetivo de Sprint puede volverse obsoleto, la complejidad puede aumentar y el riesgo puede aumentar. Los Sprints más cortos se pueden emplear para generar más ciclos de aprendizaje y limitar el riesgo de coste y esfuerzo a un período de tiempo más pequeño. Cada Sprint puede considerarse un proyecto corto.",
+			"content2": "Existen varias prácticas para pronosticar el progreso, como gráficos de burn-downs, burn-ups, o flujos acumulativos. Si bien han demostrado ser útiles, estos no sustituyen la importancia del empirismo. En entornos complejos, se desconoce lo que sucederá. Solo lo que ya ha sucedido se puede utilizar para la toma de decisiones con vistas a futuro.",
+			"content3": "Un Sprint podría ser cancelado si el Objetivo del Sprint se vuelve obsoleto. Solo el Propietario del Producto tiene la autoridad para cancelar el Sprint."
+		},
+		"planning": {
+			"title": "Planificación de Sprint",
+			"intro1": "El Sprint Planning inicia el Sprint estableciendo el trabajo que se realizará para el mismo. Este plan resultante es creado por el trabajo colaborativo de todo el equipo de Scrum.",
+			"intro2": "El propietario del producto (Product Owner) se asegura de que los asistentes estén preparados para discutir los elementos de trabajo pendiente de producto más importantes y cómo se asignan al objetivo del producto. El equipo de Scrum también puede invitar a otras personas a asistir a la planificación del Sprint para proporcionar asesoramiento.",
+			"intro3": "La planificación del Sprint aborda los siguientes temas:",
+			"topics": {
+				"topic1": {
+					"title": "Tema Uno: ¿Por qué este Sprint es valioso?",
+					"content1": "El Propietario del Producto (Product Owner) propone cómo el producto podría aumentar su valor y utilidad en el Sprint actual. A continuación, todo el equipo de Scrum colabora para definir un objetivo de Sprint que comunique por qué el Sprint es valioso para las partes interesadas. El Objetivo Sprint debe finalizarse antes del final de la Planificación de Sprint."
+				},
+				"topic2": {
+					"title": "Tema dos: ¿Qué se puede hacer este Sprint?",
+					"content1": "A través del debate con el propietario del producto (Product Owner), los desarrolladores seleccionan los elementos del Product Backlog para incluir en el Sprint actual. El equipo de Scrum puede refinar estos elementos durante este proceso, lo que aumenta la comprensión y confianza.",
+					"content2": "Seleccionar cuánto se puede completar dentro de un Sprint puede ser un desafío. Sin embargo, cuanto más sepan los desarrolladores sobre su rendimiento pasado, su capacidad futura y su definición de hecho, más seguro estarán en sus pronósticos de Sprint."
+				},
+				"topic3": {
+					"title": "Tema Tres: ¿Cómo se realizará el trabajo elegido?",
+					"content1": "Para cada elemento de trabajo pendiente de producto (Product Backlog item) seleccionado, los desarrolladores planifican el trabajo necesario para crear un incremento que cumpla con la definición de hecho. Esto se hace normalmente mediante la descomposición de elementos de trabajo pendiente (Product Backlog item) del producto en elementos de trabajo más pequeños que se puedan realizar en un día o menos. La forma de hacerlo es según la discreción de los propios desarrolladores. Nadie más les dice cómo convertir los elementos de trabajo pendiente del producto en incrementos de valor."
+				}
+			},
+			"content1": "El objetivo de Sprint (Sprint Goal), los elementos de trabajo pendiente de producto seleccionados para el Sprint, más el plan para entregarlos se conocen conjuntamente como el trabajo pendiente de Sprint (Sprint Backlog).",
+			"content2": "El Sprint Planning tiene una duración máxima de ocho horas para un Sprint de un mes. Para sprints más cortos, el evento suele ser más corto."
+		},
+		"daily": {
+			"title": "Scrum diario (Daily Scrum)",
+			"content1": "El propósito del Daily Scrum es inspeccionar el progreso hacia el Objetivo Sprint y adaptar el Sprint Backlog según sea necesario, ajustando el próximo trabajo planeado.",
+			"content2": "El Daily Scrum es un evento de 15 minutos (máximo) para los desarrolladores del equipo de Scrum. Para reducir la complejidad, se lleva a cabo al mismo tiempo y lugar todos los días laborables del Sprint. Si el propietario del producto o el Scrum Master están trabajando activamente en los elementos del Trabajo pendiente de Sprint, participan como desarrolladores.",
+			"content3": "Los desarrolladores pueden seleccionar cualquier estructura y técnicas que deseen, siempre y cuando su Scrum diario se centre en el progreso hacia el objetivo de Sprint y produzca un plan accionable para el día siguiente de trabajo. Esto crea enfoque y mejora la autogestión.",
+			"content4": "Los Scrums diarios (Daily Scrum) mejoran la comunicación, identifican impedimentos, promueven una rápida para la toma de decisiones, y en consecuencia, eliminan la necesidad de otras reuniones.",
+			"content5": "El Daily Scrum no es la única vez que los desarrolladores pueden ajustar su plan. Frecuentemente se reúnen durante todo el día para debatir de forma más detalladas sobre la adaptación o replanificación del resto del trabajo del Sprint."
+		},
+		"review": {
+			"title": "Revision del Sprint (Sprint Review)",
+			"content1": "El propósito de la revisión del Sprint es inspeccionar el resultado del Sprint y determinar futuras adaptaciones. El equipo de Scrum presenta los resultados de su trabajo a las partes interesadas clave y se discute el progreso hacia el Objetivo de Producto.",
+			"content2": "Durante el evento, el equipo de Scrum y las partes interesadas revisan lo que se logró en el Sprint y lo que ha cambiado en su entorno. En base a esta información, los asistentes colaboran en qué hacer a continuación. El trabajo pendiente del producto también se puede ajustar para satisfacer nuevas oportunidades. Sprint Review es una sesión de trabajo y el equipo de Scrum debe evitar limitarla a que se convierta en una simple presentación.",
+			"content3": "La revisión de Sprint es el penúltimo evento del Sprint y se utiliza en un plazo máximo de cuatro horas para un Sprint de un mes. Para sprints más cortos, el evento suele ser más corto."
+		},
+		"retrospective": {
+			"title": "La retrospectiva del Sprint (Sprint Retrospective)",
+			"content1": "El propósito de la retrospectiva Sprint es planificar formas de aumentar la calidad y la eficacia.",
+			"content2": "El equipo de Scrum inspecciona cómo fue el último Sprint con respecto a individuos, interacciones, procesos, herramientas y su definición de Hecho. Los elementos inspeccionados a menudo varían según el dominio del trabajo. Las suposiciones que los desviaron se identifican y se exploran sus orígenes. El equipo de Scrum analiza qué fue bien durante el Sprint, qué problemas encontró y cómo esos problemas fueron (o no fueron) resueltos.",
+			"content3": "El equipo de Scrum identifica los cambios más útiles para mejorar su eficacia. Las mejoras más impactantes se abordan lo antes posible. Incluso se pueden agregar al Sprint Backlog para el próximo Sprint.",
+			"content4": "La retrospectiva Sprint concluye el Sprint. Se utiliza un intervalo de tiempo de hasta un máximo de tres horas para un Sprint de un mes. Para sprints más cortos, el evento suele ser más corto."
+		}
+	},
+	"artifacts": {
+		"title": "Artefactos de Scrum",
+		"intro": "Los artefactos de Scrum representan trabajo o valor. Están diseñados para maximizar la transparencia de la información clave. Por lo tanto, cada uno de los que los inspecciona tienen la misma base para la adaptación.",
+		"commitments": {
+			"title": "Cada artefacto contiene un compromiso para garantizar que proporciona información que mejora la transparencia y el enfoque con el que se puede medir el progreso:",
+			"content1": "Para el trabajo pendiente del producto es el objetivo del producto.",
+			"content2": "Para el Sprint Backlog es el Sprint Goal.",
+			"content3": "Para el Incremento es la Definición de Hecho."
+		},
+		"content": [
+			"Estos compromisos existen para reforzar el empirismo y los valores de Scrum para el equipo de Scrum y sus partes interesadas."
+		],
+		"productBacklog": {
+			"title": "Pila del producto (Product Backlog)",
+			"intro1": "El trabajo pendiente del producto es una lista emergente y ordenada de lo que se necesita para mejorar el producto. Es la única fuente de trabajo emprendida por el equipo Scrum.",
+			"intro2": "Los elementos de trabajo pendiente de producto que puede ser hecho por el equipo de Scrum dentro de un Sprint se consideran listos para su selección en un evento de planificación de Sprint. Por lo general adquieren este grado de transparencia después de las actividades de refinación. El refinamiento de Backlog del producto es el acto de descomponer y definir aún más los elementos de trabajo pendiente del producto en artículos más pequeños y precisos. Esta es una actividad en curso para agregar detalles, como una descripción, un pedido y un tamaño. Los atributos a menudo varían con el dominio del trabajo.",
+			"intro3": "Los desarrolladores que realizarán el trabajo son responsables del tamaño. El Propietario del Producto (Product Owner) puede influir en los desarrolladores ayudándoles a entender y seleccionar mejores alternativas.",
+			"commitment": {
+				"title": "Compromiso: Objetivo del producto (Product Goal)",
+				"content1": "El objetivo del producto (Product Goal) describe un estado futuro del producto que puede servir como objetivo para el equipo Scrum contra el cual planificar. El objetivo del producto se encuentra en el trabajo pendiente del producto (Product Backlog). El resto del trabajo pendiente del producto surge para definir \"qué\" cumplirá el objetivo del producto. ",
+				"content2": "Un producto es un vehículo para entregar valor. Tiene un límite claro, partes interesadas conocidas, usuarios o clientes bien definidos. Un producto podría ser un servicio, un producto físico o algo más abstracto.",
+				"content3": "El objetivo del producto es el objetivo a largo plazo para el equipo Scrum. Deben cumplir (o abandonar) un objetivo antes de asumir el siguiente."
+			}
+		},
+		"sprintBacklog": {
+			"title": "La pila del Sprint (Sprint Backlog)",
+			"content1": "El Trabajo pendiente de Sprint se compone del objetivo sprint (por qué), el conjunto de elementos de trabajo pendiente de producto seleccionados para el Sprint (qué), así como un plan accionable para entregar el incremento (cómo).",
+			"content2": "El Trabajo pendiente de Sprint es un plan por y para los desarrolladores. Es una imagen muy visible y en tiempo real del trabajo que los desarrolladores planean realizar durante el Sprint para lograr el Objetivo Sprint. Por lo tanto, el Sprint Backlog se actualiza a lo largo del Sprint a medida que se aprende más. Debe tener suficientes detalles para que puedan inspeccionar su progreso en el Scrum Diario",
+			"commitment": {
+				"title": "Compromiso: Sprint Goal",
+				"content1": "El Sprint Goal es el único objetivo para el Sprint. Aunque el objetivo de Sprint es un compromiso de los desarrolladores, proporciona flexibilidad en términos del trabajo exacto necesario para lograrlo. El Objetivo Sprint también crea coherencia y enfoque, animando al equipo de Scrum a trabajar juntos en lugar de en iniciativas separadas.",
+				"content2": "El objetivo de Sprint se crea durante el evento Sprint Planning y, a continuación, se agrega al Trabajo pendiente de Sprint. A medida que los desarrolladores trabajan durante el Sprint, tienen en cuenta el objetivo de Sprint. Si el trabajo resulta ser diferente de lo que esperaban, colaboran con el propietario del producto para negociar el alcance del Trabajo pendiente de Sprint dentro del Sprint sin afectar al objetivo de Sprint."
+			}
+		},
+		"increment": {
+			"title": "Incremento (Increment)",
+			"content1": "Un Incremento es un paso de hormigón hacia el Objetivo del Producto. Cada Incremento es aditivo a todos los Incrementos anteriores y verificado a fondo, asegurando que todos los Incrementos funcionen juntos. Para proporcionar el valor, el incremento debe ser utilizable.",
+			"content2": "Se pueden crear varios incrementos dentro de un Sprint. La suma de los Incrementos se presenta en la Revisión Sprint apoyando así el empirismo. Sin embargo, un Incremento puede ser entregado a las partes interesadas antes del final del Sprint. La revisión de Sprint nunca debe considerarse una puerta para liberar valor.",
+			"content3": "El trabajo no se puede considerar parte de un Incremento a menos que cumpla con la Definición de Hecho.",
+			"commitment": {
+				"title": "Compromiso: Definición de Hecho (Definition of Done)",
+				"content1": "La Definición de Hecho es una descripción formal del estado del Incremento cuando cumple con las medidas de calidad requeridas para el producto.",
+				"content2": "En el momento en que un elemento de trabajo pendiente de producto cumple con la definición de hecho, se crea un incremento.",
+				"content3": "La definición de Hecho crea transparencia al proporcionar a todos una comprensión compartida de qué trabajo se completó como parte del Incremento. Si un elemento de trabajo pendiente de producto no cumple con la definición de hecho, no se puede liberar, ni siquiera presentar en la revisión de Sprint. En su lugar, vuelve al Trabajo pendiente del producto para su consideración futura.",
+				"content4": "Si la definición de hecho para un incremento forma parte de los estándares de la organización, todos los equipos de Scrum deben seguirla como mínimo. Si no es un estándar organizativo, el equipo de Scrum debe crear una definición de hecho adecuada para el producto.",
+				"content5": "Los desarrolladores deben ajustarse a la definición de Hecho. Si hay varios equipos de Scrum trabajando juntos en un producto, deben definir y cumplir mutuamente con la misma definición de hecho."
+			}
+		}
+	},
+	"endNotes": {
+		"title": "Nota final",
+		"content1": "Scrum es gratuito y se ofrece en esta guía. El marco de Scrum, como se describe en este documento, es inmutable. Aunque la implementación de sólo algunas partes de Scrum es posible, el resultado final no es Scrum. Scrum sólo existe en su totalidad y funciona bien como un contenedor para otras técnicas, metodologías y prácticas."
+	},
+	"thanks": {
+		"title": "Agradecimientos",
+		"people": {
+			"title": "Personas",
+			"content1": "De las miles de personas que han contribuido a Scrum, debemos destacar a aquellos que fueron instrumentales al principio: Jeff Sutherland trabajó con Jeff McKenna y John Scumniotales,y Ken Schwaber trabajó con Mike Smith y Chris Martin, y todos ellos trabajaron juntos. Muchos otros contribuyeron en los años siguientes y sin su ayuda Scrum no sería refinado como lo es hoy en día."
+		},
+		"history": {
+			"title": "Historia de la Guía Scrum",
+			"content1": "Ken Schwaber y Jeff Sutherland presentaron por primera vez Scrum en la Conferencia OOPSLA en 1995. Esencialmente documentó el aprendizaje que Ken y Jeff ganaron durante los años anteriores y hizo pública la primera definición formal de Scrum.",
+			"content2": "La Guía Scrum documenta Scrum como desarrollado, evolucionado y sostenido durante más de 30 años por Jeff Sutherland y Ken Schwaber. Otras fuentes proporcionan patrones, procesos e información que complementan el marco de Scrum. Estos pueden aumentar la productividad, el valor, la creatividad y la satisfacción con los resultados",
+			"content3": "La historia completa de Scrum se describe en otro lugar. Para honrar los primeros lugares donde fue probado y comprobado, reconocemos Individual Inc., Newspage, Fidelity Investments e IDX (ahora GE Medical)."
+		},
+		"translators": {
+			"title": "Traductores",
+			"content1": "Esta guía ha sido traducida de la versión original en inglés proporcionada por Ken Schwaber y Jeff Sutherland. El equipo de personas que han contribuido a esta traducción está formado por:",
+			"content2": "David Hernán Tardini y David Marti. Información de contacto y traductores: ",
+			"content3": "David HernánTardini",
+			"content4": "Email: htardini@gmail.com",
+			"content5": "http://www.linkedin.com/in/davidhtardini",
+			"content6": "David Marti",
+			"content7": "Email: davidmarti@hotmail.com",
+			"content8": "https://twitter.com/xsfera"
+		}
+	},
+	"changes": {
+		"title": "Cambios entre las versiones 2017 y 2020 de la Guía Scrum",
+		"change1": {
+			"title": "Aún menos prescriptivo",
+			"content": "Con los años, la Guía Scrum se volvió cada vez más prescriptiva. La versión 2020 pretende que Scrum sea un marco mínimamente válido y suficiente, eliminando o suavizando su lenguaje prescriptivo. Por ejemplo, las preguntas se han eliminado del Daily Scrum, se ha suavizado el idioma relacionado con los atributos del elemento de trabajo pendiente del producto (Product Backlog), se ha suavizado el lenguaje relacionado con los elementos de la Retrospectiva para añadirlo al trabajo pendiente de sprint (Sprint Backlog) y se ha acortado la sección de cancelación de sprint, entre otros."
+		},
+		"change2": {
+			"title": "Un equipo, centrado en un producto",
+			"content": "El objetivo era eliminar el concepto de un equipo independiente, lo que ha dado lugar a comportamientos de \"proxy\" o \"nosotros y ellos\" entre el propietario del producto (Product Owner) y el equipo de desarrollo. Ahora solo hay un equipo de Scrum centrado en el mismo objetivo, con tres categorías de responsabilidades: Product Owner, Scrum Master y Development Team (Desarrolladores)."
+		},
+		"change3": {
+			"title": "Presentación del objetivo del producto",
+			"content": "La Guía Scrum 2020 introduce el concepto de Objetivo de Producto, con la finalidad de permitir que el Equipo de Scrum se centre en un objetivo más grande y con más valor. Cada Sprint debe acercar el producto al objetivo de este."
+		},
+		"change4": {
+			"title": "Un espacio para el objetivo de Sprint, la definición de hecho y el objetivo del producto",
+			"content": "Las guías anteriores de Scrum describieron el propósito del producto y la definición de hecho, (Definition of Done) sin reconocer realmente su identidad. No eran artefactos, pero estaban asociados con él de alguna manera. Con la inclusión del objetivo del producto, la versión 2020 proporciona más claridad a este respecto. Cada uno de los tres artefactos ahora contiene \"compromisos\" asociados. Para el trabajo pendiente del producto (Product Backlog), existe el objetivo del producto. El Sprint Backlog tiene como objetivo el Sprint, y el incremento tiene la definición de hecho (ahora sin comillas). Todos ellos existen para proporcionar transparencia y centrarse en el progreso de cada artefacto."
+		},
+		"change5": {
+			"title": "Autogestión en lugar de auto-organización",
+			"content": "Las Guías Scrum anteriores se referían a los equipos de desarrollo como autoorganizados, eligiendo quién hizo el trabajo y cómo se hizo. La versión de 2020 presta más atención al equipo de Scrum, y hace hincapié en un equipo autogestionado de Scrum, que selecciona quién, cómo y dónde trabajar."
+		},
+		"change6": {
+			"title": "Tres temas en la planificación del sprint",
+			"content": "La Guía Scrum 2020 añade y enfatiza un tercer tema \"Por qué\" en referencia al Objetivo del Sprint, más allá de los \"Qué\" y \"Cómo\" existentes."
+		},
+		"change7": {
+			"title": "Simplificación general del lenguaje para un público más amplio",
+			"content": "La Guía Scrum 2020 ha hecho hincapié en la eliminación de frases redundantes y complejas, así como en la supresión de las influencias restantes en el mundo de las TIC (por ejemplo, pruebas, sistemas, diseños, requisitos, etc.). La Guía de Scrum 2020 ahora tiene menos de 13 páginas."
+		}
+	}
+}

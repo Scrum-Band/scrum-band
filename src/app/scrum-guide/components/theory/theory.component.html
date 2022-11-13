@@ -1,0 +1,26 @@
+<!-- TEORIA -->
+<mat-card>
+  <mat-card-title>
+    {{ scrumGuideTheory.title | translate }}
+  </mat-card-title>
+  <mat-card-content>
+    <p *ngFor="let intro of scrumGuideTheory.intro">
+      {{ intro | translate }}
+    </p>
+    <!-- TRANSPARENCIA -->
+    <h2>{{ scrumGuideTheory.transparency.title | translate }}</h2>
+    <p *ngFor="let content of scrumGuideTheory.transparency.content">
+      {{ content | translate }}
+    </p>
+    <!-- INSPECCION -->
+    <h2>{{ scrumGuideTheory.inspection.title | translate }}</h2>
+    <p *ngFor="let content of scrumGuideTheory.inspection.content">
+      {{ content | translate }}
+    </p>
+    <!-- ADAPTACION -->
+    <h2>{{ scrumGuideTheory.adaptation.title | translate }}</h2>
+    <p *ngFor="let content of scrumGuideTheory.adaptation.content">
+      {{ content | translate }}
+    </p>
+  </mat-card-content>
+</mat-card>

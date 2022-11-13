@@ -1,30 +1,28 @@
-import { Injectable } from "@angular/core";
-import { Feature } from "./feature.interface";
-import { FEATURES_CONSTANT } from "./features.constants";
+import { Injectable } from '@angular/core';
+import { Feature } from '../../../services/idb/features/features.interface';
+import { IdbService } from '../../../services/idb/idb.service';
 
 @Injectable({
-  providedIn: "root",
+	providedIn: 'root'
 })
 export class FeaturesService {
-  features: Feature[] = FEATURES_CONSTANT;
+	constructor(private idb: IdbService) {}
 
-  constructor() {}
+	getAllFeatures(): Feature[] {
+		return this.idb.features();
+	}
 
-  getAllFeatures(): Feature[] {
-    return this.features;
-  }
+	getFeatureByName(name: string): Feature | undefined {
+		return this.idb.features().find((f) => f.name == name);
+	}
 
-  getFeatureByName(name: string): Feature | undefined {
-    return this.features.find((f) => f.name == name);
-  }
-
-  getFeaturesByNames(names: string[]): Feature[] {
-    const result: Feature[] = [] as Feature[];
-    this.features.forEach((feature) => {
-      if (names.includes(feature.name)) {
-        result.push(feature);
-      }
-    });
-    return result;
-  }
+	getFeaturesByNames(names: string[]): Feature[] {
+		const result: Feature[] = [] as Feature[];
+		this.idb.features().forEach((feature) => {
+			if (names.includes(feature.name)) {
+				result.push(feature);
+			}
+		});
+		return result;
+	}
 }

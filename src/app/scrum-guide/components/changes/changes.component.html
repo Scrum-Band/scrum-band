@@ -1,0 +1,12 @@
+<!-- CHANGES -->
+<mat-card>
+  <mat-card-title>
+    <h2>{{ scrumGuideChanges.title | translate }}</h2>
+  </mat-card-title>
+  <mat-card-content>
+    <div *ngFor="let change of scrumGuideChanges.changes">
+      <h3>{{ change.title | translate }}</h3>
+      <p>{{ change.content | translate }}</p>
+    </div>
+  </mat-card-content>
+</mat-card>

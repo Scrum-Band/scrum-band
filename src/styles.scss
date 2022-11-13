@@ -1,21 +1,32 @@
-@import "assets/theming/theming";
+@import 'assets/theming/theming';
 
 html,
 body {
-  height: 100%;
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
-  overflow-x: hidden;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+  font-size: 1rem;
+  overflow: auto;
 }
 .postit {
   position: absolute;
   opacity: 0.7;
   z-index: -100;
 }
+.fixed {
+  position: fixed;
+}
+.app-toolbar {
+  top: 0;
+  z-index: 1000;
+}
+.secondary-toolbar {
+  top: 64px;
+  z-index: 1000;
+}
 footer {
   width: 100%;
 }
-.mat-card {
+.mat-card-glass {
   background-blend-mode: hard-light;
   backdrop-filter: blur(1em);
   -webkit-backdrop-filter: blur(1em);
@@ -31,7 +42,7 @@ footer {
 }
 
 .animated-box:after {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -55,8 +66,7 @@ footer {
 }
 
 .animated-box.in:after {
-  animation: frame-enter 1s forwards ease-in-out reverse,
-    gradient-animation 4s ease-in-out infinite;
+  animation: frame-enter 1s forwards ease-in-out reverse, gradient-animation 4s ease-in-out infinite;
 }
 
 /* motion */
@@ -116,18 +126,7 @@ footer {
     );
   }
   75% {
-    -webkit-clip-path: polygon(
-      0% 100%,
-      1px 100%,
-      1px 1px,
-      1px 1px,
-      1px 1px,
-      1px 1px,
-      1px 1px,
-      1px 1px,
-      1px 0%,
-      0% 0%
-    );
+    -webkit-clip-path: polygon(0% 100%, 1px 100%, 1px 1px, 1px 1px, 1px 1px, 1px 1px, 1px 1px, 1px 1px, 1px 0%, 0% 0%);
   }
   100% {
     -webkit-clip-path: polygon(

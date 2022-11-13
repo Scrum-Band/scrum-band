@@ -1,11 +1,97 @@
 {
-  "sign in": "Entrar",
-  "features": "Características",
-  "open source": "Open Source",
-  "pricing": "Precios",
-  "es": "Español",
-  "en": "English",
-  "translate": "Traducir",
-  "encender": "Encender las luces",
-  "apagar": "Apagar las luces"
+	"sign in": "Entrar",
+	"features": "Características",
+	"open source": "Open Source",
+	"pricing": "Precios",
+	"es": "Español",
+	"en": "English",
+	"translate": "Traducir",
+	"light": {
+		"on": "Encender las luces",
+		"off": "Apagar las luces"
+	},
+	"feature": {
+		"spm": {
+			"title": "Manage your project memebers, backlogs and scheduled meetings",
+			"description": "xxxxxx"
+		},
+		"teams": {
+			"title": "xxxxxxxx",
+			"description": "xxxxxx"
+		},
+		"dashboard": {
+			"title": "xxxxxxxx",
+			"description": "xxxxxx"
+		},
+		"backlogs": {
+			"title": "xxxxxxxx",
+			"description": "xxxxxx"
+		},
+		"planningRoom": {
+			"title": "xxxxxxxx",
+			"description": "xxxxxx"
+		},
+		"groomingRoom": {
+			"title": "xxxxxxxx",
+			"description": "xxxxxx"
+		},
+		"dailyRoom": {
+			"title": "xxxxxxxx",
+			"description": "xxxxxx"
+		},
+		"reviewRoom": {
+			"title": "xxxxxxxx",
+			"description": "xxxxxx"
+		},
+		"retrospectiveRoom": {
+			"title": "xxxxxxxx",
+			"description": "xxxxxx"
+		},
+		"autoReport": {
+			"title": "xxxxxxxx",
+			"description": "xxxxxx"
+		},
+		"history": {
+			"title": "xxxxxxxx",
+			"description": "xxxxxx"
+		},
+		"dataExport": {
+			"title": "xxxxxxxx",
+			"description": "xxxxxx"
+		},
+		"achievements": {
+			"title": "xxxxxxxx",
+			"description": "xxxxxx"
+		},
+		"resources": {
+			"title": "xxxxxxxx",
+			"description": "xxxxxx"
+		}
+	},
+	"improvement": {
+		"init": {
+			"phase": "INICIO",
+			"description": "'El Product Owner será el encargado de identificar al resto del equipo (Developers, Scrum Master) y a los Stakeholders del proyecto. Crear las épicas que darán lugar a un Product Backlog priorizado y transmitirlo junto al Product Goal y la planificación de lanzamiento al resto del equipo y Stakeholders."
+		},
+		"planning": {
+			"phase": "PLANIFICACIÓN",
+			"description": "El Product Owner propone como aumentar el valor y todos colaboran para definir un Sprint Goal. Seleccionan y refinan los items del Product Backlog necesarios para alcanzarlo y los Developers lo descomponen en tareas de uno o dos días dando lugar al Sprint Backlog. El scrum Master se encarga de que se siga la metodología."
+		},
+		"implementation": {
+			"phase": "IMPLEMENTACIÓN",
+			"description": "El Product Owner Se encargara del refinamiento del Product Backlog y no será necesario en las Daily, en caso de asistir será reponsabilidad del Scrum Master que este no interrumpa ni se extralimite mientras que los Developers se sincronizan y adaptan para conseguir el Sprint Goal."
+		},
+		"review": {
+			"phase": "REVISIÓN",
+			"description": "El equipo Scrum junto con los Stakeholders revisarán el incremento de valor generado para que el Product Owner pueda decidir si se ha cumplido el Sprint Goal y genere nuevos contenidos para el Product Backlog con las nuevas ideas o correcciones a abordar en futuros Sprints."
+		},
+		"retrospective": {
+			"phase": "RETROSPECTIVA",
+			"description": "El Equipo Scrum identifica los cambios a realizar para mejorar su calidad y eficacia como equipo. Identificando los orígenes de sus logros y carencias en el Sprint o Proyecto que se está cerrando inpeccionandolo a todos los niveles, tanto individual como de procesos, herramientas o iteracciones."
+		},
+		"launch": {
+			"phase": "LANZAMIENTO",
+			"description": "El Equipo Scrum identifica los cambios a realizar para mejorar su calidad y eficacia como equipo. Identificando los orígenes de sus logros y carencias en el Sprint o Proyecto que se está cerrando inpeccionandolo a todos los niveles, tanto individual como de procesos, herramientas o iteracciones."
+		}
+	}
 }

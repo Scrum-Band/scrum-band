@@ -1,10 +1,4 @@
-<button
-  mat-icon-button
-  (click)="switchLight()"
-  [title]="
-    lightsOn ? translate.instant('apagar') : translate.instant('encender')
-  "
->
-  <mat-icon *ngIf="lightsOn">dark_mode</mat-icon>
-  <mat-icon *ngIf="!lightsOn">light_mode</mat-icon>
+<button mat-icon-button (click)="switchLight()" [title]="lightsOn ? translate.instant('light.off') : translate.instant('light.on')">
+	<mat-icon *ngIf="lightsOn">dark_mode</mat-icon>
+	<mat-icon *ngIf="!lightsOn">light_mode</mat-icon>
 </button>

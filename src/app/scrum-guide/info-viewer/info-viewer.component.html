@@ -1,0 +1,22 @@
+<button mat-button (click)="openDialog()">
+  <span [ngSwitch]="key">
+    <em *ngSwitchCase="'scrum-guide'">{{ 'scrum-guide.intro.title' | translate }}</em>
+    <em *ngSwitchCase="'scrum'">SCRUM</em>
+    <em *ngSwitchCase="'theory'">{{ 'scrum-guide.theory.title' | translate }}</em>
+    <em *ngSwitchCase="'values'">{{ 'scrum-guide.values.title' | translate }}</em>
+    <em *ngSwitchCase="'team'">{{ 'scrum-guide.team.title' | translate }}</em>
+    <em *ngSwitchCase="'developers'">{{ 'scrum-guide.team.developers.title' | translate }}</em>
+    <em *ngSwitchCase="'product-owner'">{{ 'scrum-guide.team.po.title' | translate }}</em>
+    <em *ngSwitchCase="'scrum-master'">{{ 'scrum-guide.team.sm.title' | translate }}</em>
+    <em *ngSwitchCase="'events'">{{ 'scrum-guide.events.title' | translate }}</em>
+    <em *ngSwitchCase="'sprint'">{{ 'scrum-guide.events.sprint.title' | translate }}</em>
+    <em *ngSwitchCase="'planning'">{{ 'scrum-guide.events.planning.title' | translate }}</em>
+    <em *ngSwitchCase="'daily'">{{ 'scrum-guide.events.daily.title' | translate }}</em>
+    <em *ngSwitchCase="'review'">{{ 'scrum-guide.events.review.title' | translate }}</em>
+    <em *ngSwitchCase="'retrospective'">{{ 'scrum-guide.events.retrospective.title' | translate }}</em>
+    <em *ngSwitchCase="'artifacts'">{{ 'scrum-guide.artifacts.title' | translate }}</em>
+    <em *ngSwitchCase="'product-backlog'">{{ 'scrum-guide.artifacts.productBacklog.title' | translate }}</em>
+    <em *ngSwitchCase="'sprint-backlog'">{{ 'scrum-guide.artifacts.sprintBacklog.title' | translate }}</em>
+    <em *ngSwitchCase="'increment'">{{ 'scrum-guide.artifacts.increment.title' | translate }}</em> </span
+  ><sup><mat-icon color="accent" class="small-icon">info</mat-icon></sup>
+</button>

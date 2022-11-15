@@ -1,0 +1,71 @@
+<!-- <p class="mat-card-title"><mat-icon color="accent">info</mat-icon> {{ data.key }}</p> -->
+<mat-grid-list cols="3" rowHeight="3em">
+  <mat-grid-tile colspan="2" class="tile-align-left">
+    <span [ngSwitch]="data.key">
+      <b class="mat-card-title" *ngSwitchCase="'scrum-guide'">{{
+        'scrum-guide.intro.title' | translate | uppercase
+      }}</b>
+      <b class="mat-card-title" *ngSwitchCase="'scrum'">SCRUM</b>
+      <b class="mat-card-title" *ngSwitchCase="'theory'">{{ 'scrum-guide.theory.title' | translate }}</b>
+      <b class="mat-card-title" *ngSwitchCase="'values'">{{ 'scrum-guide.values.title' | translate }}</b>
+      <b class="mat-card-title" *ngSwitchCase="'team'">{{ 'scrum-guide.team.title' | translate }}</b>
+      <b class="mat-card-title" *ngSwitchCase="'developers'">{{ 'scrum-guide.team.developers.title' | translate }}</b>
+      <b class="mat-card-title" *ngSwitchCase="'product-owner'">{{ 'scrum-guide.team.po.title' | translate }}</b>
+      <b class="mat-card-title" *ngSwitchCase="'scrum-master'">{{ 'scrum-guide.team.sm.title' | translate }}</b>
+      <b class="mat-card-title" *ngSwitchCase="'events'">{{ 'scrum-guide.events.title' | translate }}</b>
+      <b class="mat-card-title" *ngSwitchCase="'sprint'">{{ 'scrum-guide.events.sprint.title' | translate }}</b>
+      <b class="mat-card-title" *ngSwitchCase="'planning'">{{ 'scrum-guide.events.planning.title' | translate }}</b>
+      <b class="mat-card-title" *ngSwitchCase="'daily'">{{ 'scrum-guide.events.daily.title' | translate }}</b>
+      <b class="mat-card-title" *ngSwitchCase="'review'">{{ 'scrum-guide.events.review.title' | translate }}</b>
+      <b class="mat-card-title" *ngSwitchCase="'retrospective'">{{
+        'scrum-guide.events.retrospective.title' | translate
+      }}</b>
+      <b class="mat-card-title" *ngSwitchCase="'artifacts'">{{ 'scrum-guide.artifacts.title' | translate }}</b>
+      <b class="mat-card-title" *ngSwitchCase="'product-backlog'">{{
+        'scrum-guide.artifacts.productBacklog.title' | translate
+      }}</b>
+      <b class="mat-card-title" *ngSwitchCase="'sprint-backlog'">{{
+        'scrum-guide.artifacts.sprintBacklog.title' | translate
+      }}</b>
+      <b class="mat-card-title" *ngSwitchCase="'increment'">{{
+        'scrum-guide.artifacts.increment.title' | translate
+      }}</b>
+    </span>
+    <span class="sb-spacer"></span>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <span class="sb-spacer"></span>
+    <p align="end">
+      <a routerLink="/scrum-guide" mat-dialog-close
+        ><mat-icon color="accent" title="ver guía completa">menu_book</mat-icon></a
+      >
+      <mat-icon color="warn" title="cerrar" mat-dialog-close>close</mat-icon>
+    </p>
+  </mat-grid-tile>
+</mat-grid-list>
+
+<mat-dialog-content [ngSwitch]="data.key">
+  <sb-sg-full-guide *ngSwitchCase="'scrum-guide'"></sb-sg-full-guide>
+  <sb-sg-definition *ngSwitchCase="'scrum'"></sb-sg-definition>
+  <sb-sg-theory *ngSwitchCase="'scrum'"></sb-sg-theory>
+  <sb-sg-theory *ngSwitchCase="'theory'"></sb-sg-theory>
+  <sb-sg-values *ngSwitchCase="'scrum'"></sb-sg-values>
+  <sb-sg-values *ngSwitchCase="'values'"></sb-sg-values>
+  <sb-sg-team *ngSwitchCase="'team'"></sb-sg-team>
+  <sb-sg-developers *ngSwitchCase="'developers'"></sb-sg-developers>
+  <sb-sg-product-owner *ngSwitchCase="'product-owner'"></sb-sg-product-owner>
+  <sb-sg-scrum-master *ngSwitchCase="'scrum-master'"></sb-sg-scrum-master>
+  <sb-sg-events *ngSwitchCase="'events'"></sb-sg-events>
+  <sb-sg-sprint *ngSwitchCase="'sprint'"></sb-sg-sprint>
+  <sb-sg-planning *ngSwitchCase="'planning'"></sb-sg-planning>
+  <sb-sg-daily *ngSwitchCase="'daily'"></sb-sg-daily>
+  <sb-sg-review *ngSwitchCase="'review'"></sb-sg-review>
+  <sb-sg-retrospective *ngSwitchCase="'retrospective'"></sb-sg-retrospective>
+  <sb-sg-artifacts *ngSwitchCase="'artifacts'"></sb-sg-artifacts>
+  <sb-sg-product-backlog *ngSwitchCase="'product-backlog'"></sb-sg-product-backlog>
+  <sb-sg-sprint-backlog *ngSwitchCase="'sprint-backlog'"></sb-sg-sprint-backlog>
+  <sb-sg-increment *ngSwitchCase="'increment'"></sb-sg-increment>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <sb-sg-attribution></sb-sg-attribution>
+</mat-dialog-actions>

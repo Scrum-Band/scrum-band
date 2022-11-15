@@ -1,17 +1,20 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row>
     <img
+      class="pointer"
+      routerLink="/"
       src="../../../assets/icons/icon-48x48.png"
       title="Scrum Band"
-      alt="Scrum Band logo"
-    />
+      alt="Scrum Band logo" />
+    <span class="pointer" routerLink="/">Scrum Band</span>
+    <span class="sb-spacer"></span>
     <ng-container *ngIf="!isMobileDisplay; then menuButtons"></ng-container>
     <span class="sb-spacer"></span>
 
     <sb-lang-selector></sb-lang-selector>
 
     <button mat-flat-button color="accent" title="{{ 'sign in' | translate }}">
-      {{ "sign in" | translate }}
+      {{ 'sign in' | translate }}
     </button>
   </mat-toolbar-row>
 
@@ -24,12 +27,12 @@
 <ng-template #menuButtons>
   <span class="sb-spacer"></span>
   <button mat-button title="{{ 'features' | translate }}">
-    {{ "features" | translate }}<mat-icon>expand_more</mat-icon>
+    {{ 'features' | translate }}<mat-icon>expand_more</mat-icon>
   </button>
   <button mat-button title="{{ 'open source' | translate }}">
-    {{ "open source" | translate }}<mat-icon>expand_more</mat-icon>
+    {{ 'open source' | translate }}<mat-icon>expand_more</mat-icon>
   </button>
   <button mat-button title="{{ 'pricing' | translate }}">
-    {{ "pricing" | translate }}
+    {{ 'pricing' | translate }}
   </button>
 </ng-template>

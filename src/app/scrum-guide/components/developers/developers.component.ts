@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { ScrumGuideTeam } from '../../../services/idb/scrum-guide/scrum-guide-team.interface';
-import { SCRUM_GUIDE } from '../../../services/idb/scrum-guide/scrum-guide.constant';
+import { ScrumGuideTeam } from '../../interfaces/scrum-guide-team.interface';
+import { SCRUM_GUIDE } from '../../scrum-guide.constant';
 
 @Component({
   selector: 'sb-sg-developers',

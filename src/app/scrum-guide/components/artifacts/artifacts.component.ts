@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { ScrumGuideArtifacts } from '../../../services/idb/scrum-guide/scrum-guide-artifacts.interface';
-import { SCRUM_GUIDE } from '../../../services/idb/scrum-guide/scrum-guide.constant';
+import { ScrumGuideArtifacts } from '../../interfaces/scrum-guide-artifacts.interface';
+import { SCRUM_GUIDE } from '../../scrum-guide.constant';
 
 @Component({
   selector: 'sb-sg-artifacts',

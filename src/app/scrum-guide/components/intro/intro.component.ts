@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { ScrumGuideIntro } from '../../../services/idb/scrum-guide/scrum-guide-intro.interface';
-import { SCRUM_GUIDE } from '../../../services/idb/scrum-guide/scrum-guide.constant';
+import { ScrumGuideIntro } from '../../interfaces/scrum-guide-intro.interface';
+import { SCRUM_GUIDE } from '../../scrum-guide.constant';
 
 @Component({
   selector: 'sb-sg-intro',

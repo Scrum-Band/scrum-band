@@ -12,16 +12,16 @@ import { ScrumGuideTheory } from './scrum-guide-theory.interface';
 import { ScrumGuideValues } from './scrum-guide-values.interface';
 
 export interface ScrumGuide {
-	attribution: ScrumGuideAttribution;
-	intro: ScrumGuideIntro;
-	purpose: ScrumGuidePurpose;
-	definition: ScrumGuideDefinition;
-	theory: ScrumGuideTheory;
-	values: ScrumGuideValues;
-	team: ScrumGuideTeam;
-	events: ScrumGuideEvents;
-	artifacts: ScrumGuideArtifacts;
-	endNotes: ScrumGuideEndNote;
-	thanks: ScrumGuideThanks;
-	changes: ScrumGuideChanges;
+  attribution: ScrumGuideAttribution;
+  intro: ScrumGuideIntro;
+  purpose: ScrumGuidePurpose;
+  definition: ScrumGuideDefinition;
+  theory: ScrumGuideTheory;
+  values: ScrumGuideValues;
+  team: ScrumGuideTeam;
+  events: ScrumGuideEvents;
+  artifacts: ScrumGuideArtifacts;
+  endNotes: ScrumGuideEndNote;
+  thanks: ScrumGuideThanks;
+  changes: ScrumGuideChanges;
 }

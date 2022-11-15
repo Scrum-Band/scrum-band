@@ -1,4 +1,4 @@
-import { ScrumGuide } from './scrum-guide.interface';
+import { ScrumGuide } from './interfaces/scrum-guide.interface';
 
 export const SCRUM_GUIDE: ScrumGuide = {
   attribution: {

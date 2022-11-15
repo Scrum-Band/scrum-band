@@ -1,0 +1,10 @@
+<mat-card>
+  <mat-card-title>
+    {{ retrospective.title | translate }}
+  </mat-card-title>
+  <mat-card-content>
+    <p *ngFor="let content of retrospective.content">
+      {{ content | translate }}
+    </p>
+  </mat-card-content>
+</mat-card>

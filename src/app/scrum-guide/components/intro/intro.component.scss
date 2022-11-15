@@ -1,0 +1,19 @@
+@import '../../../../assets/theming/variables';
+
+mat-card {
+  text-align: center;
+}
+
+mat-card-title {
+  font-size: 4rem;
+  color: $accent-color;
+  padding-top: 2rem;
+}
+mat-card-subtitle {
+  font-size: 2rem;
+  color: $accent-color;
+  margin-bottom: 2rem;
+}
+mat-card-content {
+  text-align: center;
+}

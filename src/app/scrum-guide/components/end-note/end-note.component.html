@@ -1,0 +1,11 @@
+<!-- END NOTE -->
+<mat-card>
+  <mat-card-title>
+    {{ scrumGuideEndNote.title | translate }}
+  </mat-card-title>
+  <mat-card-content>
+    <p *ngFor="let content of scrumGuideEndNote.content">
+      {{ content | translate }}
+    </p>
+  </mat-card-content>
+</mat-card>

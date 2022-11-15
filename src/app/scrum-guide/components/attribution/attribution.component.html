@@ -1,0 +1,11 @@
+<!-- ATRIBUCIONES -->
+<mat-card>
+  <mat-card-title>
+    {{ scrumGuideAttribution.title | translate }}
+  </mat-card-title>
+  <mat-card-subtitle>
+    <span *ngFor="let content of scrumGuideAttribution.content">
+      {{ content | translate }}
+    </span>
+  </mat-card-subtitle>
+</mat-card>

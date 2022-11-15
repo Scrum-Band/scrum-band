@@ -1,0 +1,18 @@
+<!-- DEFINICION -->
+<mat-card>
+  <mat-card-title>
+    {{ scrumGuideDefinition.title | translate }}
+  </mat-card-title>
+  <mat-card-content>
+    <p>{{ scrumGuideDefinition.intro | translate }}</p>
+    <p>{{ scrumGuideDefinition.resume.title | translate }}</p>
+    <ul>
+      <li *ngFor="let step of scrumGuideDefinition.resume.steps">
+        {{ step | translate }}
+      </li>
+    </ul>
+    <p *ngFor="let step of scrumGuideDefinition.content">
+      {{ step | translate }}
+    </p>
+  </mat-card-content>
+</mat-card>

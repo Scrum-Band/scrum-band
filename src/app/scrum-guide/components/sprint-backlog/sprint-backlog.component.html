@@ -1,0 +1,18 @@
+<mat-card>
+  <mat-card-title>
+    {{ sprintBacklog.title | translate }}
+  </mat-card-title>
+  <mat-card-content>
+    <p *ngFor="let content of sprintBacklog.content">
+      {{ content | translate }}
+    </p>
+    <p class="color-accent">
+      {{ sprintBacklog.commitment.title | translate }}
+    </p>
+    <ul>
+      <li *ngFor="let content of sprintBacklog.commitment.content">
+        {{ content | translate }}
+      </li>
+    </ul>
+  </mat-card-content>
+</mat-card>

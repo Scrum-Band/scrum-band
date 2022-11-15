@@ -1,0 +1,21 @@
+<mat-card>
+  <mat-card-title>
+    {{ sprint.title | translate }}
+  </mat-card-title>
+  <mat-card-content>
+    <p *ngFor="let sprintIntro of sprint.intro">
+      {{ sprintIntro | translate }}
+    </p>
+    <p>
+      {{ sprint.list.title | translate }}
+    </p>
+    <ul>
+      <li *ngFor="let item of sprint.list.content">
+        {{ item | translate }}
+      </li>
+    </ul>
+    <p *ngFor="let content of sprint.content">
+      {{ content | translate }}
+    </p>
+  </mat-card-content>
+</mat-card>

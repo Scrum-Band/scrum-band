@@ -1,0 +1,24 @@
+<!-- ARTEFACTOS -->
+<mat-card>
+  <mat-card-title>
+    {{ scrumGuideArtifacts.title | translate }}
+  </mat-card-title>
+  <mat-card-content>
+    <p>{{ scrumGuideArtifacts.intro | translate }}</p>
+    <p>{{ scrumGuideArtifacts.commitments.title | translate }}</p>
+    <ul>
+      <li *ngFor="let content of scrumGuideArtifacts.commitments.content">
+        {{ content | translate }}
+      </li>
+    </ul>
+    <p *ngFor="let content of scrumGuideArtifacts.content">
+      {{ content | translate }}
+    </p>
+    <!-- PRODUCT BACKLOG -->
+    <sb-sg-product-backlog id="sb-sg-product-backlog"></sb-sg-product-backlog>
+    <!-- SPRINT BACKLOG -->
+    <sb-sg-sprint-backlog id="sb-sg-sprint-backlog"></sb-sg-sprint-backlog>
+    <!-- INCREMENT -->
+    <sb-sg-increment id="sb-sg-increment"></sb-sg-increment>
+  </mat-card-content>
+</mat-card>

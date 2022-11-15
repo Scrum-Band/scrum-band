@@ -1,0 +1,10 @@
+<mat-card>
+  <mat-card-title>
+    {{ review.title | translate }}
+  </mat-card-title>
+  <mat-card-content>
+    <p *ngFor="let content of review.content">
+      {{ content | translate }}
+    </p>
+  </mat-card-content>
+</mat-card>

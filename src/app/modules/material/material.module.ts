@@ -19,6 +19,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatDialogModule } from '@angular/material/dialog';
 
 const components: any[] = [
+  ReactiveFormsModule,
   MatIconModule,
   MatToolbarModule,
   MatButtonModule,
@@ -26,7 +27,6 @@ const components: any[] = [
   MatFormFieldModule,
   MatInputModule,
   MatTooltipModule,
-  ReactiveFormsModule,
   MatMenuModule,
   MatListModule,
   MatGridListModule,

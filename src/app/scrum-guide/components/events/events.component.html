@@ -1,0 +1,21 @@
+<!-- EVENTOS -->
+<mat-card>
+  <mat-card-title>
+    {{ scrumGuideEvents.title | translate }}
+  </mat-card-title>
+  <mat-card-content>
+    <p *ngFor="let intro of scrumGuideEvents.intro">
+      {{ intro | translate }}
+    </p>
+    <!-- SPRINT-->
+    <sb-sg-sprint id="sb-sg-sprint"></sb-sg-sprint>
+    <!-- PLANNING-->
+    <sb-sg-planning id="sb-sg-planning"></sb-sg-planning>
+    <!-- DAILY -->
+    <sb-sg-daily id="sb-sg-daily"></sb-sg-daily>
+    <!-- REVIEW -->
+    <sb-sg-review id="sb-sg-review"></sb-sg-review>
+    <!-- RETROSPECTIVE -->
+    <sb-sg-retrospective id="sb-sg-retrospective"></sb-sg-retrospective>
+  </mat-card-content>
+</mat-card>

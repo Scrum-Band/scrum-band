@@ -1,50 +1,165 @@
-// // Custom Theming for Angular Material
-// // For more information: https://material.angular.io/guide/theming
-// @use "@angular/material" as mat;
-// // Plus imports for other components in your app.
-
-// // Include the common styles for Angular Material. We include this here so that you only
-// // have to load a single css file for Angular Material in your app.
-// // Be sure that you only ever include this mixin once!
-// @include mat.core();
-
-// // Define the palettes for your theme using the Material Design palettes available in palette.scss
-// // (imported above). For each palette, you can optionally specify a default, lighter, and darker
-// // hue. Available color palettes: https://material.io/design/color/
-// $scrum-band-primary: mat.define-palette(mat.$indigo-palette);
-// $scrum-band-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
-
-// // The warn palette is optional (defaults to red).
-// $scrum-band-warn: mat.define-palette(mat.$red-palette);
-
-// // Create the theme object. A theme consists of configurations for individual
-// // theming systems such as "color" or "typography".
-// $scrum-band-theme: mat.define-light-theme(
-//   (
-//     color: (
-//       primary: $scrum-band-primary,
-//       accent: $scrum-band-accent,
-//       warn: $scrum-band-warn,
-//     ),
-//   )
-// );
-
-// // Include theme styles for core and each component used in your app.
-// // Alternatively, you can import and @include the theme mixins for each component
-// // that you are using.
-// @include mat.all-component-themes($scrum-band-theme);
-
-@import "assets/theming/theming";
+@import 'assets/theming/theming';
+@import 'assets/theming/variables';
 
 html,
 body {
-  height: 100%;
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
-  overflow: hidden;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+  font-size: 1rem;
+  overflow: auto;
 }
-.ball {
+.postit {
   position: absolute;
   opacity: 0.7;
   z-index: -100;
+}
+.fixed {
+  position: fixed;
+}
+.app-toolbar {
+  top: 0;
+  z-index: 1000;
+}
+.secondary-toolbar {
+  top: 64px;
+  z-index: 1000;
+}
+footer {
+  width: 100%;
+}
+mat-card {
+  margin: 1rem;
+}
+mat-card-title {
+  color: $accent-color;
+  padding-bottom: 1.5rem;
+}
+mat-card-content {
+  text-align: justify;
+}
+
+.mat-card-glass {
+  background-blend-mode: hard-light;
+  backdrop-filter: blur(1em);
+  -webkit-backdrop-filter: blur(1em);
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border-radius: 12px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
+  margin: 1em auto;
+}
+
+.color-accent {
+  color: $accent-color;
+}
+
+/* The animation starts here */
+.animated-box {
+  position: relative;
+}
+
+.animated-box:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 1px;
+  background: linear-gradient(120deg, #3cc157, #2aa7ff, #fcbc0f);
+  background-size: 300% 300%;
+  clip-path: polygon(
+    0% 100%,
+    1px 100%,
+    1px 1px,
+    calc(100% - 1px) 1px,
+    calc(100% - 1px) calc(100% - 1px),
+    1px calc(100% - 1px),
+    1px 100%,
+    100% 100%,
+    100% 0%,
+    0% 0%
+  );
+}
+
+.animated-box.in:after {
+  animation: frame-enter 1s forwards ease-in-out reverse, gradient-animation 4s ease-in-out infinite;
+}
+
+/* motion */
+@keyframes gradient-animation {
+  0% {
+    background-position: 15% 0%;
+  }
+  50% {
+    background-position: 85% 100%;
+  }
+  100% {
+    background-position: 15% 0%;
+  }
+}
+
+@keyframes frame-enter {
+  0% {
+    clip-path: polygon(
+      0% 100%,
+      1px 100%,
+      1px 1px,
+      calc(100% - 1px) 1px,
+      calc(100% - 1px) calc(100% - 1px),
+      1px calc(100% - 1px),
+      1px 100%,
+      100% 100%,
+      100% 0%,
+      0% 0%
+    );
+  }
+  25% {
+    clip-path: polygon(
+      0% 100%,
+      1px 100%,
+      1px 1px,
+      calc(100% - 1px) 1px,
+      calc(100% - 1px) calc(100% - 1px),
+      calc(100% - 1px) calc(100% - 1px),
+      calc(100% - 1px) 100%,
+      100% 100%,
+      100% 0%,
+      0% 0%
+    );
+  }
+  50% {
+    clip-path: polygon(
+      0% 100%,
+      1px 100%,
+      1px 1px,
+      calc(100% - 1px) 1px,
+      calc(100% - 1px) 1px,
+      calc(100% - 1px) 1px,
+      calc(100% - 1px) 1px,
+      calc(100% - 1px) 1px,
+      100% 0%,
+      0% 0%
+    );
+  }
+  75% {
+    -webkit-clip-path: polygon(0% 100%, 1px 100%, 1px 1px, 1px 1px, 1px 1px, 1px 1px, 1px 1px, 1px 1px, 1px 0%, 0% 0%);
+  }
+  100% {
+    -webkit-clip-path: polygon(
+      0% 100%,
+      1px 100%,
+      1px 100%,
+      1px 100%,
+      1px 100%,
+      1px 100%,
+      1px 100%,
+      1px 100%,
+      1px 100%,
+      0% 100%
+    );
+  }
+}
+
+.sb-spacer {
+  flex: 1 1 auto;
 }

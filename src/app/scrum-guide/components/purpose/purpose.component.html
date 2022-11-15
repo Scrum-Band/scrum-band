@@ -1,0 +1,11 @@
+<!-- PROPOSITO -->
+<mat-card>
+  <mat-card-title>
+    {{ scrumGuidePurpose.title | translate }}
+  </mat-card-title>
+  <mat-card-content>
+    <p *ngFor="let content of scrumGuidePurpose.content">
+      {{ content | translate }}
+    </p>
+  </mat-card-content>
+</mat-card>

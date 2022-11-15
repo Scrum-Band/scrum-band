@@ -1,0 +1,18 @@
+<mat-card>
+  <mat-card-title>
+    {{ productBacklog.title | translate }}
+  </mat-card-title>
+  <mat-card-content>
+    <p *ngFor="let intro of productBacklog.intro">
+      {{ intro | translate }}
+    </p>
+    <p class="color-accent">
+      {{ productBacklog.commitment.title | translate }}
+    </p>
+    <ul>
+      <li *ngFor="let content of productBacklog.commitment.content">
+        {{ content | translate }}
+      </li>
+    </ul>
+  </mat-card-content>
+</mat-card>

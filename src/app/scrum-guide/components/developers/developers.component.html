@@ -1,0 +1,18 @@
+<mat-card>
+  <mat-card-title>
+    {{ developers.title | translate }}
+  </mat-card-title>
+  <mat-card-content>
+    <p>
+      {{ developers.intro | translate }}
+    </p>
+    <p>
+      {{ developers.skills.intro | translate }}
+    </p>
+    <ul>
+      <li *ngFor="let skill of developers.skills.list">
+        {{ skill | translate }}
+      </li>
+    </ul>
+  </mat-card-content>
+</mat-card>

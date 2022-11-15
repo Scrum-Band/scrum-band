@@ -1,0 +1,16 @@
+<mat-card>
+  <mat-card-title>
+    {{ scrumGuideTeam.title | translate }}
+  </mat-card-title>
+  <mat-card-content>
+    <p *ngFor="let intro of scrumGuideTeam.intro">
+      {{ intro | translate }}
+    </p>
+    <!-- DESARROLLADORES -->
+    <sb-sg-developers id="sb-sg-developers"></sb-sg-developers>
+    <!-- PRODUCT OWNER -->
+    <sb-sg-product-owner id="sb-sg-product-owner"></sb-sg-product-owner>
+    <!-- SCRUM MASTER -->
+    <sb-sg-scrum-master id="sb-sg-scrum-master"></sb-sg-scrum-master>
+  </mat-card-content>
+</mat-card>

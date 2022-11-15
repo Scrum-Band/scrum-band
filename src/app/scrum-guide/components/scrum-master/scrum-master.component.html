@@ -1,0 +1,18 @@
+<mat-card>
+  <mat-card-title>
+    {{ sm.title | translate }}
+  </mat-card-title>
+  <mat-card-content>
+    <p *ngFor="let content of sm.content">
+      {{ content | translate }}
+    </p>
+    <div *ngFor="let serve of sm.serves">
+      <p>{{ serve.title | translate }}</p>
+      <ul>
+        <li *ngFor="let item of serve.list">
+          {{ item | translate }}
+        </li>
+      </ul>
+    </div>
+  </mat-card-content>
+</mat-card>

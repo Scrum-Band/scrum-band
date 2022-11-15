@@ -7,6 +7,11 @@ import { PricingComponent } from "./pricing/pricing.component";
 import { FeaturesComponent } from "./features/features.component";
 import { MaterialModule } from "../material/material.module";
 import { BackgroundComponent } from "./background/background.component";
+import { FooterComponent } from "./footer/footer.component";
+import { ScrumPhasesComponent } from "./scrum-phases/scrum-phases.component";
+import { FeatureChipComponent } from "./features/chip/chip.component";
+import { TranslateModule } from "@ngx-translate/core";
+import { ImprovementsComponent } from './features/improvements/improvements.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +19,12 @@ import { BackgroundComponent } from "./background/background.component";
     PricingComponent,
     FeaturesComponent,
     BackgroundComponent,
+    FooterComponent,
+    ScrumPhasesComponent,
+    FeatureChipComponent,
+    ImprovementsComponent,
   ],
-  imports: [CommonModule, PublicRoutingModule, MaterialModule],
+  imports: [CommonModule, PublicRoutingModule, MaterialModule, TranslateModule],
+  exports: [FooterComponent, FeatureChipComponent, ImprovementsComponent],
 })
 export class PublicModule {}

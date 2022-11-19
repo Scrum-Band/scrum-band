@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SGViewerComponent } from './viewer/viewer.component';
 import { SGRoutingModule } from './scrum-guide-routing.module';
-import { MaterialModule } from '../modules/material/material.module';
 import { TranslateModule } from '@ngx-translate/core';
 import { ChangesComponent } from './components/changes/changes.component';
 import { ThanksComponent } from './components/thanks/thanks.component';
@@ -28,35 +27,62 @@ import { RetrospectiveComponent } from './components/retrospective/retrospective
 import { ProductBacklogComponent } from './components/product-backlog/product-backlog.component';
 import { SprintBacklogComponent } from './components/sprint-backlog/sprint-backlog.component';
 import { IncrementComponent } from './components/increment/increment.component';
+import { MaterialModule } from '../material/material.module';
 
 @NgModule({
-	declarations: [SGViewerComponent, ChangesComponent, ThanksComponent, EndNoteComponent, ArtifactsComponent, EventsComponent, TeamComponent, ValuesComponent, TheoryComponent, DefinitionComponent, PurposeComponent, IntroComponent, AttributionComponent, FullGuideComponent, DevelopersComponent, ProductOwnerComponent, ScrumMasterComponent, SprintComponent, PlanningComponent, DailyComponent, ReviewComponent, RetrospectiveComponent, ProductBacklogComponent, SprintBacklogComponent, IncrementComponent],
-	imports: [CommonModule, SGRoutingModule, MaterialModule, TranslateModule],
-	exports: [
-   ChangesComponent,
-   ThanksComponent,
-   EndNoteComponent,
-   ArtifactsComponent,
-   EventsComponent,
-   TeamComponent,
-   ValuesComponent,
-   TheoryComponent,
-   DefinitionComponent,
-   PurposeComponent,
-   IntroComponent,
-   AttributionComponent,
-   FullGuideComponent,
-   DevelopersComponent,
-   ProductOwnerComponent,
-   ScrumMasterComponent,
-   SprintComponent,
-   PlanningComponent,
-   DailyComponent,
-   ReviewComponent,
-   RetrospectiveComponent,
-   ProductBacklogComponent,
-   SprintBacklogComponent,
-   IncrementComponent
-	]
+  declarations: [
+    SGViewerComponent,
+    ChangesComponent,
+    ThanksComponent,
+    EndNoteComponent,
+    ArtifactsComponent,
+    EventsComponent,
+    TeamComponent,
+    ValuesComponent,
+    TheoryComponent,
+    DefinitionComponent,
+    PurposeComponent,
+    IntroComponent,
+    AttributionComponent,
+    FullGuideComponent,
+    DevelopersComponent,
+    ProductOwnerComponent,
+    ScrumMasterComponent,
+    SprintComponent,
+    PlanningComponent,
+    DailyComponent,
+    ReviewComponent,
+    RetrospectiveComponent,
+    ProductBacklogComponent,
+    SprintBacklogComponent,
+    IncrementComponent
+  ],
+  imports: [CommonModule, SGRoutingModule, MaterialModule, TranslateModule],
+  exports: [
+    ChangesComponent,
+    ThanksComponent,
+    EndNoteComponent,
+    ArtifactsComponent,
+    EventsComponent,
+    TeamComponent,
+    ValuesComponent,
+    TheoryComponent,
+    DefinitionComponent,
+    PurposeComponent,
+    IntroComponent,
+    AttributionComponent,
+    FullGuideComponent,
+    DevelopersComponent,
+    ProductOwnerComponent,
+    ScrumMasterComponent,
+    SprintComponent,
+    PlanningComponent,
+    DailyComponent,
+    ReviewComponent,
+    RetrospectiveComponent,
+    ProductBacklogComponent,
+    SprintBacklogComponent,
+    IncrementComponent
+  ]
 })
 export class ScrumGuideModule {}

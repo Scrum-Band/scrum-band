@@ -15,6 +15,7 @@ import { SbLightSwitcherComponent } from './components/sb-light-switcher/sb-ligh
 import { IdbService } from './services/idb/idb.service';
 import { MultiTranslateHttpLoader } from 'ngx-translate-multi-http-loader';
 import { GuiService } from './services/gui/gui.service';
+import { SbFooterComponent } from './components/sb-footer/sb-footer.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(httpBackend: HttpBackend) {
@@ -25,7 +26,7 @@ export function HttpLoaderFactory(httpBackend: HttpBackend) {
 }
 
 @NgModule({
-  declarations: [AppComponent, SbLangSelectorComponent, SbLightSwitcherComponent],
+  declarations: [AppComponent, SbLangSelectorComponent, SbLightSwitcherComponent, SbFooterComponent],
   imports: [
     AppRoutingModule,
     BrowserModule,
@@ -47,6 +48,8 @@ export function HttpLoaderFactory(httpBackend: HttpBackend) {
   ],
   providers: [IdbService, GuiService],
   bootstrap: [AppComponent],
-  exports: []
+  exports: [
+    SbFooterComponent
+  ]
 })
 export class AppModule {}

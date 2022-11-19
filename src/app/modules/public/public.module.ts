@@ -8,11 +8,10 @@ import { FeaturesComponent } from './features/features.component';
 import { MaterialModule } from '../material/material.module';
 import { BackgroundComponent } from './background/background.component';
 import { TranslateModule } from '@ngx-translate/core';
-import { ScrumGuideModule } from '../../scrum-guide/scrum-guide.module';
 import { FeatureChipComponent } from './features/chip/chip.component';
 import { ImprovementsComponent } from './features/improvements/improvements.component';
-import { FooterComponent } from './footer/footer.component';
 import { ScrumPhasesComponent } from './scrum-phases/scrum-phases.component';
+import { ScrumGuideModule } from '../scrum-guide/scrum-guide.module';
 
 @NgModule({
   declarations: [
@@ -20,12 +19,11 @@ import { ScrumPhasesComponent } from './scrum-phases/scrum-phases.component';
     PricingComponent,
     FeaturesComponent,
     BackgroundComponent,
-    FooterComponent,
     ScrumPhasesComponent,
     FeatureChipComponent,
     ImprovementsComponent
   ],
   imports: [CommonModule, PublicRoutingModule, MaterialModule, TranslateModule, ScrumGuideModule],
-  exports: [FooterComponent, FeatureChipComponent, ImprovementsComponent]
+  exports: [FeatureChipComponent, ImprovementsComponent]
 })
 export class PublicModule {}

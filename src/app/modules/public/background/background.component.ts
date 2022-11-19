@@ -30,7 +30,7 @@ export class BackgroundComponent implements OnInit, OnDestroy {
       postit.classList.add('postit');
       postit.style.background = this.colors[Math.floor(Math.random() * this.colors.length)];
       postit.style.left = `${Math.floor(Math.random() * 100)}vw`;
-      postit.style.top = `${Math.floor(Math.random() * 80)}vh`;
+      postit.style.top = `${Math.floor(Math.random() * 100)}vh`;
       postit.style.transform = `scale(${Math.random() * 2})`;
       postit.style.width = `${Math.random() * 2}em`;
       postit.style.height = postit.style.width;

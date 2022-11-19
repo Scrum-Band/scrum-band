@@ -1,8 +1,9 @@
-<div class="sb-wrapper">
+<header>
   <mat-toolbar color="primary" class="app-toolbar fixed">
     <mat-toolbar-row>
       <button mat-icon-button (click)="toggle()">
-        <mat-icon>menu</mat-icon>
+        <mat-icon *ngIf="!sbSidenav.opened">menu</mat-icon>
+        <mat-icon *ngIf="sbSidenav.opened">close</mat-icon>
       </button>
       <img
         class="pointer"
@@ -12,16 +13,15 @@
         alt="Scrum Band logo" />
       <span class="pointer" routerLink="/">Scrum Band</span>
       <span class="sb-spacer"></span>
-
       <sb-light-switcher></sb-light-switcher>
       <sb-lang-selector></sb-lang-selector>
-
       <button mat-flat-button color="accent" title="{{ 'sign in' | translate }}">
         {{ 'sign in' | translate }}
       </button>
     </mat-toolbar-row>
   </mat-toolbar>
-
+</header>
+<section>
   <mat-sidenav-container hasBackdrop="true">
     <mat-sidenav #sbSidenav mode="over" fixedInViewport fixedTopGap="64" opened>
       <mat-action-list>
@@ -33,10 +33,9 @@
         </mat-list-item>
       </mat-action-list>
     </mat-sidenav>
-
-    <div class="wrapper">
-      <router-outlet></router-outlet>
-    </div>
-    <sb-footer></sb-footer>
+    <router-outlet></router-outlet>
   </mat-sidenav-container>
-</div>
+</section>
+<footer>
+  <!-- <sb-footer></sb-footer> -->
+</footer>

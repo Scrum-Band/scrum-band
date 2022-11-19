@@ -1,4 +1,4 @@
-<div class="viewer-wrapper">
+<header>
   <mat-toolbar color="primary" class="fixed secondary-toolbar">
     <mat-toolbar-row>
       <span>{{ 'scrum-guide.intro.subtitle' | translate }}</span>
@@ -8,6 +8,8 @@
       </button>
     </mat-toolbar-row>
   </mat-toolbar>
+</header>
+<section>
   <mat-sidenav-container autosize hasBackdrop="true">
     <mat-sidenav #drawer mode="over" position="end" fixedInViewport fixedTopGap="128">
       <mat-action-list>
@@ -23,4 +25,4 @@
     </mat-sidenav>
     <sb-sg-full-guide></sb-sg-full-guide>
   </mat-sidenav-container>
-</div>
+</section>

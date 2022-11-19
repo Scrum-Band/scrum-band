@@ -8,10 +8,12 @@
 }
 html,
 body {
-  height: 100%;
   margin: 0;
   font-family: Roboto, 'Helvetica Neue', sans-serif;
   overflow: auto;
+}
+body {
+  margin-top: 64px;
 }
 .postit {
   position: absolute;

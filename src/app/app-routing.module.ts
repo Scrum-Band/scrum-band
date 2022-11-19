@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: 'scrum-guide',
-    loadChildren: () => import('./scrum-guide/scrum-guide.module').then((m) => m.ScrumGuideModule)
+    loadChildren: () => import('./modules/scrum-guide/scrum-guide.module').then((m) => m.ScrumGuideModule)
   }
 ];
 

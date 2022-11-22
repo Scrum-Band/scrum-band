@@ -10,7 +10,7 @@ import {
   signInWithRedirect
 } from '@angular/fire/auth';
 import { MatDialog } from '@angular/material/dialog';
-import { SbSimpleDialogComponent } from '../../components/sb-simple-dialog/sb-simple-dialog.component';
+import { SbSimpleDialogComponent } from '../../modules/layout/sb-simple-dialog/sb-simple-dialog.component';
 
 @Injectable({
   providedIn: 'root'

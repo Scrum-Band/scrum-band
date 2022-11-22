@@ -1,11 +1,12 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/core';
 
 @Component({
   selector: 'sb-background',
-  templateUrl: './background.component.html',
-  styleUrls: ['./background.component.scss']
+  templateUrl: './sb-background.component.html',
+  styleUrls: ['./sb-background.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class BackgroundComponent implements OnInit, OnDestroy {
+export class SbBackgroundComponent implements OnInit, OnDestroy {
   constructor() {}
 
   private postitsNum: number = 200;

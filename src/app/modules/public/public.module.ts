@@ -6,7 +6,6 @@ import { HomeComponent } from './home/home.component';
 import { PricingComponent } from './pricing/pricing.component';
 import { FeaturesComponent } from './features/features.component';
 import { MaterialModule } from '../material/material.module';
-import { BackgroundComponent } from './background/background.component';
 import { TranslateModule } from '@ngx-translate/core';
 import { FeatureChipComponent } from './features/chip/chip.component';
 import { ImprovementsComponent } from './features/improvements/improvements.component';
@@ -18,7 +17,6 @@ import { ScrumGuideModule } from '../scrum-guide/scrum-guide.module';
     HomeComponent,
     PricingComponent,
     FeaturesComponent,
-    BackgroundComponent,
     ScrumPhasesComponent,
     FeatureChipComponent,
     ImprovementsComponent

@@ -1,10 +1,10 @@
-import { Component, OnInit } from "@angular/core";
-import { LanguageService } from "../../services/language.service";
+import { Component, OnInit } from '@angular/core';
+import { LanguageService } from '../../../services/language.service';
 
 @Component({
-  selector: "sb-lang-selector",
-  templateUrl: "./sb-lang-selector.component.html",
-  styleUrls: ["./sb-lang-selector.component.scss"],
+  selector: 'sb-lang-selector',
+  templateUrl: './sb-lang-selector.component.html',
+  styleUrls: ['./sb-lang-selector.component.scss']
 })
 export class SbLangSelectorComponent implements OnInit {
   constructor(private lang: LanguageService) {}

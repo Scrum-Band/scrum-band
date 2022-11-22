@@ -16,6 +16,10 @@ import { IdbService } from './services/idb/idb.service';
 import { MultiTranslateHttpLoader } from 'ngx-translate-multi-http-loader';
 import { GuiService } from './services/gui/gui.service';
 import { SbFooterComponent } from './components/sb-footer/sb-footer.component';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { provideAnalytics, getAnalytics, ScreenTrackingService, UserTrackingService } from '@angular/fire/analytics';
+import { provideAuth, getAuth } from '@angular/fire/auth';
+import { SbSimpleDialogComponent } from './components/sb-simple-dialog/sb-simple-dialog.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(httpBackend: HttpBackend) {
@@ -26,7 +30,7 @@ export function HttpLoaderFactory(httpBackend: HttpBackend) {
 }
 
 @NgModule({
-  declarations: [AppComponent, SbLangSelectorComponent, SbLightSwitcherComponent, SbFooterComponent],
+  declarations: [AppComponent, SbLangSelectorComponent, SbLightSwitcherComponent, SbFooterComponent, SbSimpleDialogComponent],
   imports: [
     AppRoutingModule,
     BrowserModule,
@@ -44,12 +48,13 @@ export function HttpLoaderFactory(httpBackend: HttpBackend) {
         useFactory: HttpLoaderFactory,
         deps: [HttpBackend]
       }
-    })
+    }),
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAnalytics(() => getAnalytics()),
+    provideAuth(() => getAuth())
   ],
-  providers: [IdbService, GuiService],
+  providers: [IdbService, GuiService, ScreenTrackingService, UserTrackingService],
   bootstrap: [AppComponent],
-  exports: [
-    SbFooterComponent
-  ]
+  exports: [SbFooterComponent, SbSimpleDialogComponent]
 })
 export class AppModule {}

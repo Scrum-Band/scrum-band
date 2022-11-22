@@ -1,4 +1,7 @@
 {
+  "simple-dialog-header": "Info",
+  "link-accounts-message": "You have other account with the same email and we will link them to your profile",
+  "accept": "Ok",
   "sign in": "Sign In",
   "features": "Features",
   "open source": "Open Source",

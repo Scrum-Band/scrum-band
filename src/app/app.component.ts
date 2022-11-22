@@ -1,7 +1,10 @@
 import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 import { Component, ViewChild } from '@angular/core';
+import { GithubAuthProvider } from '@angular/fire/auth';
 import { MatSidenav } from '@angular/material/sidenav';
+import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
+import { AuthService } from './services/auth/auth.service';
 import { GuiService } from './services/gui/gui.service';
 import { LanguageService } from './services/language.service';
 
@@ -16,7 +19,9 @@ export class AppComponent {
     public translate: TranslateService,
     public guiService: GuiService,
     private lang: LanguageService,
-    private breakpointObserver: BreakpointObserver
+    private breakpointObserver: BreakpointObserver,
+    private readonly authService: AuthService,
+    private readonly router: Router
   ) {
     this.lang.initLang();
     this.breakpointObserver.observe(['(max-width: 800px)']).subscribe((result: BreakpointState) => {
@@ -39,7 +44,9 @@ export class AppComponent {
   @ViewChild('sbSidenav') sbSidenav!: MatSidenav;
 
   toggle() {
-    console.log('TOOOOOOGGLE');
     this.sbSidenav.toggle();
+  }
+  signIn(provider: string) {
+    this.authService.login(provider);
   }
 }

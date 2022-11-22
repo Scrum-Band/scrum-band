@@ -28,6 +28,8 @@ import { ProductBacklogComponent } from './components/product-backlog/product-ba
 import { SprintBacklogComponent } from './components/sprint-backlog/sprint-backlog.component';
 import { IncrementComponent } from './components/increment/increment.component';
 import { MaterialModule } from '../material/material.module';
+import { InfoViewerComponent } from './info-viewer/info-viewer.component';
+import { SGInfoViewerDialogComponent } from './info-viewer/dialog/dialog.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +57,9 @@ import { MaterialModule } from '../material/material.module';
     RetrospectiveComponent,
     ProductBacklogComponent,
     SprintBacklogComponent,
-    IncrementComponent
+    IncrementComponent,
+    InfoViewerComponent,
+    SGInfoViewerDialogComponent
   ],
   imports: [CommonModule, SGRoutingModule, MaterialModule, TranslateModule],
   exports: [

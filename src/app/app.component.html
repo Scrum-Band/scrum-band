@@ -15,9 +15,13 @@
       <span class="sb-spacer"></span>
       <sb-light-switcher></sb-light-switcher>
       <sb-lang-selector></sb-lang-selector>
-      <button mat-flat-button color="accent" title="{{ 'sign in' | translate }}">
+      <button mat-flat-button [matMenuTriggerFor]="signInMenu" color="accent" title="{{ 'sign in' | translate }}">
         {{ 'sign in' | translate }}
       </button>
+      <mat-menu #signInMenu="matMenu">
+        <button mat-menu-item (click)="signIn('google.com')">Google</button>
+        <button mat-menu-item (click)="signIn('github.com')">Github</button>
+      </mat-menu>
     </mat-toolbar-row>
   </mat-toolbar>
 </header>

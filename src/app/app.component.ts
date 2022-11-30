@@ -1,10 +1,7 @@
 import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 import { Component, ViewChild } from '@angular/core';
-import { GithubAuthProvider } from '@angular/fire/auth';
 import { MatSidenav } from '@angular/material/sidenav';
-import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
-import { AuthService } from './services/auth/auth.service';
 import { GuiService } from './services/gui/gui.service';
 import { LanguageService } from './services/language.service';
 
@@ -14,21 +11,24 @@ import { LanguageService } from './services/language.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  public isMobileDisplay: boolean = true;
+  public smallDisplay: boolean = true;
+
   constructor(
+    private breakpointObserver: BreakpointObserver,
     public translate: TranslateService,
     public guiService: GuiService,
-    private lang: LanguageService,
-    private breakpointObserver: BreakpointObserver,
-    private readonly authService: AuthService,
-    private readonly router: Router
+    private lang: LanguageService
   ) {
     this.lang.initLang();
-    this.breakpointObserver.observe(['(max-width: 800px)']).subscribe((result: BreakpointState) => {
+    this.observeDisplaySize();
+  }
+
+  observeDisplaySize() {
+    this.breakpointObserver.observe(['(max-width: 1200px)']).subscribe((result: BreakpointState) => {
       if (result.matches) {
-        this.isMobileDisplay = true;
+        this.smallDisplay = true;
       } else {
-        this.isMobileDisplay = false;
+        this.smallDisplay = false;
       }
     });
   }
@@ -45,8 +45,5 @@ export class AppComponent {
 
   toggle() {
     this.sbSidenav.toggle();
-  }
-  signIn(provider: string) {
-    this.authService.login(provider);
   }
 }

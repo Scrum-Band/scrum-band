@@ -11,23 +11,17 @@
         src="../../../assets/icons/icon-48x48.png"
         title="Scrum Band"
         alt="Scrum Band logo" />
-      <span class="pointer" routerLink="/">Scrum Band</span>
+      <span class="pointer" routerLink="/" *ngIf="!smallDisplay">Scrum Band</span>
       <span class="sb-spacer"></span>
       <sb-light-switcher></sb-light-switcher>
       <sb-lang-selector></sb-lang-selector>
-      <button mat-flat-button [matMenuTriggerFor]="signInMenu" color="accent" title="{{ 'sign in' | translate }}">
-        {{ 'sign in' | translate }}
-      </button>
-      <mat-menu #signInMenu="matMenu">
-        <button mat-menu-item (click)="signIn('google.com')">Google</button>
-        <button mat-menu-item (click)="signIn('github.com')">Github</button>
-      </mat-menu>
+      <sb-sign></sb-sign>
     </mat-toolbar-row>
   </mat-toolbar>
 </header>
 <section>
   <mat-sidenav-container hasBackdrop="true">
-    <mat-sidenav #sbSidenav mode="over" fixedInViewport fixedTopGap="64" opened>
+    <mat-sidenav #sbSidenav mode="over" fixedInViewport fixedTopGap="64">
       <mat-action-list>
         <mat-list-item *ngFor="let link of MENU">
           <button mat-list-item (click)="toggle()" [routerLink]="link.name">

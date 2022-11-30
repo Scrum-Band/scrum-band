@@ -22,6 +22,7 @@ import { provideAuth, getAuth } from '@angular/fire/auth';
 import { SbSimpleDialogComponent } from './modules/layout/sb-simple-dialog/sb-simple-dialog.component';
 import { SbBackgroundComponent } from './modules/layout/sb-background/sb-background.component';
 import { LayoutModule } from './modules/layout/layout.module';
+import { AuthModule } from './modules/auth/auth.module';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(httpBackend: HttpBackend) {
@@ -54,7 +55,8 @@ export function HttpLoaderFactory(httpBackend: HttpBackend) {
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAnalytics(() => getAnalytics()),
     provideAuth(() => getAuth()),
-    LayoutModule
+    LayoutModule,
+    AuthModule
   ],
   providers: [IdbService, GuiService, ScreenTrackingService, UserTrackingService],
   bootstrap: [AppComponent],

@@ -9,13 +9,17 @@ export class AuthService {
   userLogged: any;
   tokenAPI: any;
 
+  @Output()
+  onAuthStateChanged: EventEmitter<any> = new EventEmitter<any>();
+
   constructor(private auth: Auth, public dialog: MatDialog) {
     this.auth.onAuthStateChanged((userLogged) => {
       if (userLogged) {
         this.userLogged = userLogged;
-        localStorage.setItem('userLogged', JSON.stringify(userLogged));
+        this.onAuthStateChanged.emit(this.userLogged);
       } else {
         this.cleanLocalStorage();
+        this.onAuthStateChanged.emit(null);
       }
     });
   }
@@ -35,14 +39,19 @@ export class AuthService {
     this.cleanLocalStorage();
   }
 
+  getUserLogged() {
+    this.userLogged = JSON.parse(localStorage.getItem('userLogged')!);
+    return this.userLogged;
+  }
+
   isLoggedIn(): boolean {
     const userLogged = JSON.parse(localStorage.getItem('userLogged')!);
-    return userLogged !== null && userLogged.emailVerified !== false ? true : false;
+    return userLogged != null && userLogged != undefined ? true : false;
   }
 
   errorLogin(error: any) {
     this.cleanLocalStorage();
-    console.log('errorCode', error.code, 'errorMessage', error.message);
+    console.error('errorCode', error.code, 'errorMessage', error.message);
   }
 
   successLogin(result: any, authProvider: any) {

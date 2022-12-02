@@ -5,7 +5,8 @@ import { HomeComponent } from './home/home.component';
 import { PricingComponent } from './pricing/pricing.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', redirectTo: 'home', pathMatch: 'prefix' },
+  { path: 'home', component: HomeComponent },
   { path: 'the-adventure', component: HomeComponent },
   { path: 'game-rules', component: HomeComponent },
   { path: 'character-sheet', component: HomeComponent },

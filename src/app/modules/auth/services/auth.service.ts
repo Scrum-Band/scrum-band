@@ -1,6 +1,7 @@
 import { EventEmitter, Injectable, Output } from '@angular/core';
 import { Auth, GoogleAuthProvider, signInWithPopup, signOut } from '@angular/fire/auth';
 import { MatDialog } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -9,13 +10,19 @@ export class AuthService {
   userLogged: any;
   tokenAPI: any;
 
-  constructor(private auth: Auth, public dialog: MatDialog) {
+  @Output()
+  onAuthStateChanged: EventEmitter<any> = new EventEmitter<any>();
+
+  constructor(private auth: Auth, public dialog: MatDialog, private router: Router) {
     this.auth.onAuthStateChanged((userLogged) => {
       if (userLogged) {
         this.userLogged = userLogged;
-        localStorage.setItem('userLogged', JSON.stringify(userLogged));
+        this.onAuthStateChanged.emit(this.userLogged);
+        this.router.navigate(['/']);
       } else {
         this.cleanLocalStorage();
+        this.onAuthStateChanged.emit(null);
+        this.router.navigate(['/www/home']);
       }
     });
   }
@@ -35,14 +42,19 @@ export class AuthService {
     this.cleanLocalStorage();
   }
 
+  getUserLogged() {
+    this.userLogged = JSON.parse(localStorage.getItem('userLogged')!);
+    return this.userLogged;
+  }
+
   isLoggedIn(): boolean {
     const userLogged = JSON.parse(localStorage.getItem('userLogged')!);
-    return userLogged !== null && userLogged.emailVerified !== false ? true : false;
+    return userLogged != null && userLogged != undefined ? true : false;
   }
 
   errorLogin(error: any) {
     this.cleanLocalStorage();
-    console.log('errorCode', error.code, 'errorMessage', error.message);
+    console.error('errorCode', error.code, 'errorMessage', error.message);
   }
 
   successLogin(result: any, authProvider: any) {

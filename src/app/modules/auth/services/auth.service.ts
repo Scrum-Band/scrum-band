@@ -18,7 +18,6 @@ export class AuthService {
       if (userLogged) {
         this.userLogged = userLogged;
         this.onAuthStateChanged.emit(this.userLogged);
-        this.router.navigate(['/']);
       } else {
         this.cleanLocalStorage();
         this.onAuthStateChanged.emit(null);

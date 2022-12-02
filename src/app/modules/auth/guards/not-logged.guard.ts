@@ -15,7 +15,6 @@ export class NotLoggedGuard implements CanActivate {
   ): Observable<boolean> | Promise<boolean> | boolean {
     let isLoggedIn: boolean = this.authService.isLoggedIn();
     if (isLoggedIn) {
-      window.alert('Access Denied!');
       this.router.navigate(['/']);
     }
     return true;

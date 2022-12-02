@@ -1,6 +1,7 @@
 import { EventEmitter, Injectable, Output } from '@angular/core';
 import { Auth, GoogleAuthProvider, signInWithPopup, signOut } from '@angular/fire/auth';
 import { MatDialog } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -12,14 +13,16 @@ export class AuthService {
   @Output()
   onAuthStateChanged: EventEmitter<any> = new EventEmitter<any>();
 
-  constructor(private auth: Auth, public dialog: MatDialog) {
+  constructor(private auth: Auth, public dialog: MatDialog, private router: Router) {
     this.auth.onAuthStateChanged((userLogged) => {
       if (userLogged) {
         this.userLogged = userLogged;
         this.onAuthStateChanged.emit(this.userLogged);
+        this.router.navigate(['/']);
       } else {
         this.cleanLocalStorage();
         this.onAuthStateChanged.emit(null);
+        this.router.navigate(['/www/home']);
       }
     });
   }

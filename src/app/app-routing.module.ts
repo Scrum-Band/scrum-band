@@ -5,6 +5,11 @@ import { AuthGuard } from './modules/auth/guards/auth.guard';
 const routes: Routes = [
   {
     path: '',
+    pathMatch: 'full',
+    redirectTo: 'dashboard'
+  },
+  {
+    path: 'dashboard',
     canActivate: [AuthGuard],
     loadChildren: () => import('./modules/dashboard/dashboard.module').then((m) => m.DashboardModule)
   },
@@ -17,9 +22,9 @@ const routes: Routes = [
     loadChildren: () => import('./modules/scrum-guide/scrum-guide.module').then((m) => m.ScrumGuideModule)
   },
   {
-    path: 'dashboard',
-    canActivate: [AuthGuard],
-    loadChildren: () => import('./modules/dashboard/dashboard.module').then((m) => m.DashboardModule)
+    path: '**',
+    redirectTo: 'dashboard',
+    pathMatch: 'full'
   }
 ];
 

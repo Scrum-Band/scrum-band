@@ -22,6 +22,11 @@ const routes: Routes = [
     loadChildren: () => import('./modules/scrum-guide/scrum-guide.module').then((m) => m.ScrumGuideModule)
   },
   {
+    path: 'settings',
+    canActivate: [AuthGuard],
+    loadChildren: () => import('./modules/settings/settings.module').then((m) => m.SettingsModule)
+  },
+  {
     path: '**',
     redirectTo: 'dashboard',
     pathMatch: 'full'

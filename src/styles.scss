@@ -1,9 +1,13 @@
 @import 'assets/theming/theming';
 @import 'assets/theming/variables';
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 html,
 body {
-  margin: 0;
   font-family: Roboto, 'Helvetica Neue', sans-serif;
   overflow: auto;
 }
@@ -18,10 +22,6 @@ body {
 .pointer {
   cursor: pointer;
 }
-// .app-toolbar {
-//   top: 0;
-//   z-index: 1000;
-// }
 .secondary-toolbar {
   top: $toolbar-height;
   z-index: 1000;
@@ -174,7 +174,9 @@ mat-card-content {
 .sb-spacer {
   flex: 1 1 auto;
 }
-
+.mat-list-item-content {
+  padding: 0 !important;
+}
 // .mat-drawer-inner-container {
 //   min-width: 85vw !important;
 //   width: 85vw !important;

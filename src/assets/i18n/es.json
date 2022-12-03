@@ -9,10 +9,10 @@
   "es": "Español",
   "en": "English",
   "translate": "Traducir",
-  "the-adventure": "La aventura",
-  "game-rules": "Las reglas del juego",
+  "adventures": "Aventuras",
+  "game-rules": "Reglas del juego",
   "character-sheet": "Ficha del jugador",
-  "sm-screen": "Pantalla del SM",
+  "inventory": "Inventario",
   "impact-calculator": "Calculadora de impacto",
   "light": {
     "on": "Encender las luces",

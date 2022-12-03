@@ -1,6 +1,12 @@
 @import '../assets/theming/variables';
+
+.app-toolbar {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
 mat-sidenav {
-  margin-top: ($toolbar-height + 1em);
+  margin-top: ($toolbar-height);
   width: 20vw;
   min-width: 400px;
 }

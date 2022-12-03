@@ -8,11 +8,10 @@ import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core
 })
 export class SbSidenavComponent implements OnInit {
   public MENU = [
-    { name: 'the-adventure', icon: 'signpost' },
+    { name: 'adventures', icon: 'signpost' },
     { name: 'game-rules', icon: 'menu_book' },
     { name: 'character-sheet', icon: 'badge' },
-    { name: 'sm-screen', icon: 'smart_screen' },
-    { name: 'FAQ', icon: 'quiz' }
+    { name: 'inventory', icon: 'backpack' }
   ];
 
   @Input() smallDisplay: boolean = true;

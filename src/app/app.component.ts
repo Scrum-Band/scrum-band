@@ -16,13 +16,13 @@ export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
   public smallDisplay: boolean = true;
   public sidenavOpen: boolean = true;
   public signedIn: boolean = false;
+
   @ViewChild('sbSidenav') sbSidenav!: MatSidenav;
   @ViewChild('sbToolbar') sbToolbar!: SbToolbarComponent;
 
   constructor(
     private breakpointObserver: BreakpointObserver,
     public translate: TranslateService,
-    public guiService: GuiService,
     public authService: AuthService,
     private lang: LanguageService
   ) {}
@@ -41,6 +41,10 @@ export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
   ngOnDestroy(): void {
     this.authService.onAuthStateChanged.unsubscribe();
     this.sbToolbar.toggle.unsubscribe();
+  }
+  toggle() {
+    this.sbSidenav.toggle();
+    this.sidenavOpen = this.sbSidenav.opened;
   }
 
   observeDisplaySize() {
@@ -64,9 +68,4 @@ export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
     { name: 'sm-screen', icon: 'smart_screen' },
     { name: 'FAQ', icon: 'quiz' }
   ];
-
-  toggle() {
-    this.sbSidenav.toggle();
-    this.sidenavOpen = this.sbSidenav.opened;
-  }
 }

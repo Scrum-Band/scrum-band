@@ -9,19 +9,19 @@ import { AuthService } from '../../services/auth.service';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SignComponent implements OnInit, AfterContentChecked {
+  userLogged: any;
+
   constructor(private changeDetector: ChangeDetectorRef, private authService: AuthService) {
     this.authService.onAuthStateChanged.subscribe((userLogged) => {
       this.userLogged = userLogged;
     });
   }
-  ngAfterContentChecked(): void {
-    this.changeDetector.detectChanges();
-  }
-
-  userLogged: any;
 
   ngOnInit(): void {
     this.userLogged = this.authService.getUserLogged();
+  }
+  ngAfterContentChecked(): void {
+    this.changeDetector.detectChanges();
   }
 
   signIn() {

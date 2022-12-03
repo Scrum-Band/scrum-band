@@ -14,7 +14,7 @@
     alt="Scrum Band logo" />
   <span class="pointer" routerLink="/">Scrum Band</span>
   <span class="sb-spacer"></span>
-  <sb-light-switcher></sb-light-switcher>
-  <sb-lang-selector></sb-lang-selector>
+  <sb-light-switcher *ngIf="!signedIn"></sb-light-switcher>
+  <sb-lang-selector *ngIf="!signedIn"></sb-lang-selector>
   <sb-sign></sb-sign>
 </div>

@@ -11,6 +11,7 @@ import { MatSidenav } from '@angular/material/sidenav';
 export class SbToolbarComponent {
   @Input() smallDisplay: boolean = true;
   @Input() sidenavOpen: boolean = true;
+  @Input() signedIn: boolean = false;
 
   @Output() toggle: EventEmitter<boolean> = new EventEmitter<boolean>();
 

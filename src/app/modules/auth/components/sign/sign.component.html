@@ -1,15 +1,13 @@
-<button
-  *ngIf="userLogged == null; else avatar"
-  mat-flat-button
-  class="sign-in-button"
-  title="{{ 'sign in' | translate }}"
-  (click)="signIn()">
+<button mat-flat-button *ngIf="userLogged == null; else avatar" class="sign-in-button" (click)="signIn()">
   <img class="sign-in-logo" src="./assets/img/logos/g-logo.png" />{{ 'sign in' | translate | uppercase }}
 </button>
+
 <ng-template #avatar>
   <img class="avatar" [src]="userLogged.photoURL" referrerpolicy="no-referrer" [matMenuTriggerFor]="userMenu" />
   <mat-menu #userMenu="matMenu">
-    <button mat-menu-item><mat-icon>settings</mat-icon>Settings</button>
+    <a routerLink="/settings">
+      <button mat-menu-item><mat-icon>settings</mat-icon>Settings</button>
+    </a>
     <button mat-menu-item (click)="signOut()"><mat-icon>logout</mat-icon>Sign Out</button>
   </mat-menu>
 </ng-template>

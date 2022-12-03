@@ -7,9 +7,6 @@ body {
   font-family: Roboto, 'Helvetica Neue', sans-serif;
   overflow: auto;
 }
-body {
-  margin-top: $toolbar-height;
-}
 .postit {
   position: absolute;
   opacity: 0.7;
@@ -21,10 +18,10 @@ body {
 .pointer {
   cursor: pointer;
 }
-.app-toolbar {
-  top: 0;
-  z-index: 1000;
-}
+// .app-toolbar {
+//   top: 0;
+//   z-index: 1000;
+// }
 .secondary-toolbar {
   top: $toolbar-height;
   z-index: 1000;

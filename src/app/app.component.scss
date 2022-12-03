@@ -1,6 +1,6 @@
 @import '../assets/theming/variables';
 mat-sidenav {
-  margin-top: $toolbar-height;
+  margin-top: ($toolbar-height + 1em);
   width: 20vw;
   min-width: 400px;
 }

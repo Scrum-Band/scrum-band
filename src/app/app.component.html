@@ -1,5 +1,5 @@
 <header>
-  <mat-toolbar color="primary" class="app-toolbar fixed">
+  <mat-toolbar color="primary" class="app-toolbar">
     <mat-toolbar-row>
       <sb-toolbar #sbToolbar [smallDisplay]="smallDisplay" [sidenavOpen]="sidenavOpen" [signedIn]="signedIn">
       </sb-toolbar>
@@ -8,7 +8,7 @@
 </header>
 <section>
   <mat-sidenav-container hasBackdrop="false">
-    <mat-sidenav #sbSidenav mode="side" fixedInViewport fixedTopGap="2em" opened>
+    <mat-sidenav #sbSidenav mode="side" fixedInViewport opened>
       <sb-sidenav [smallDisplay]="smallDisplay" [signedIn]="signedIn"></sb-sidenav>
     </mat-sidenav>
     <router-outlet></router-outlet>

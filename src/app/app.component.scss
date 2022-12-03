@@ -1,8 +1,13 @@
-.wrapper {
-  margin-top: 64px;
-  height: max-content;
+@import '../assets/theming/variables';
+mat-sidenav {
+  margin-top: $toolbar-height;
+  width: 20vw;
+  min-width: 400px;
 }
-
 .menu-icon {
   margin-right: 1em;
+}
+
+.active-list-item {
+  background-color: RED;
 }

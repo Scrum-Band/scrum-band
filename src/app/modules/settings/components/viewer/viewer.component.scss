@@ -2,7 +2,7 @@
 
 mat-drawer-container {
   width: 100vw;
-  height: calc(100vh - 64px);
+  height: calc(100vh - $toolbar-height);
   mat-drawer {
     width: 40vw;
     mat-list-option {

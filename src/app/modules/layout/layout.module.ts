@@ -7,17 +7,20 @@ import { SbLightSwitcherComponent } from './sb-light-switcher/sb-light-switcher.
 import { SbSimpleDialogComponent } from './sb-simple-dialog/sb-simple-dialog.component';
 import { TranslateModule } from '@ngx-translate/core';
 import { MaterialModule } from '../material/material.module';
+import { SbToolbarComponent } from './sb-toolbar/sb-toolbar.component';
+import { AuthModule } from '../auth/auth.module';
 
 const components = [
   SbLangSelectorComponent,
   SbLightSwitcherComponent,
   SbFooterComponent,
   SbSimpleDialogComponent,
-  SbBackgroundComponent
+  SbBackgroundComponent,
+  SbToolbarComponent
 ];
 @NgModule({
   declarations: [components],
-  imports: [CommonModule, MaterialModule, TranslateModule],
+  imports: [CommonModule, MaterialModule, TranslateModule, AuthModule],
   exports: [components]
 })
 export class LayoutModule {}

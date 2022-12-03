@@ -1,11 +1,6 @@
 @import 'assets/theming/theming';
 @import 'assets/theming/variables';
-* {
-  text-decoration: none;
-  :visited {
-    text-decoration: none;
-  }
-}
+
 html,
 body {
   margin: 0;
@@ -13,7 +8,7 @@ body {
   overflow: auto;
 }
 body {
-  margin-top: 64px;
+  margin-top: $toolbar-height;
 }
 .postit {
   position: absolute;
@@ -31,11 +26,17 @@ body {
   z-index: 1000;
 }
 .secondary-toolbar {
-  top: 64px;
+  top: $toolbar-height;
   z-index: 1000;
 }
 footer {
   width: 100%;
+}
+mat-toolbar,
+mat-toolbar-row {
+  height: $toolbar-height !important;
+  min-height: $toolbar-height !important;
+  padding: 0 !important;
 }
 mat-card {
   margin: 1rem;

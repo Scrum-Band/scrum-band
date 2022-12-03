@@ -60,12 +60,4 @@ export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
       }
     });
   }
-
-  public MENU = [
-    { name: 'the-adventure', icon: 'signpost' },
-    { name: 'game-rules', icon: 'menu_book' },
-    { name: 'character-sheet', icon: 'badge' },
-    { name: 'sm-screen', icon: 'smart_screen' },
-    { name: 'FAQ', icon: 'quiz' }
-  ];
 }

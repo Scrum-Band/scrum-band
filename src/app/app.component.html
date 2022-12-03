@@ -9,18 +9,7 @@
 <section>
   <mat-sidenav-container hasBackdrop="false">
     <mat-sidenav #sbSidenav mode="side" fixedInViewport fixedTopGap="2em" opened>
-      <mat-nav-list>
-        <mat-list-item *ngFor="let link of MENU">
-          <button
-            mat-list-item
-            (click)="smallDisplay ? toggle() : ''"
-            [routerLink]="link.name"
-            routerLinkActive="active-list-item">
-            <mat-icon class="menu-icon material-icons-outlined">{{ link.icon }}</mat-icon>
-            {{ link.name | translate | uppercase }}
-          </button>
-        </mat-list-item>
-      </mat-nav-list>
+      <sb-sidenav [smallDisplay]="smallDisplay" [signedIn]="signedIn"></sb-sidenav>
     </mat-sidenav>
     <router-outlet></router-outlet>
   </mat-sidenav-container>

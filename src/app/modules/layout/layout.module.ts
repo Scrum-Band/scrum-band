@@ -9,6 +9,8 @@ import { TranslateModule } from '@ngx-translate/core';
 import { MaterialModule } from '../material/material.module';
 import { SbToolbarComponent } from './sb-toolbar/sb-toolbar.component';
 import { AuthModule } from '../auth/auth.module';
+import { SbSidenavComponent } from './sb-sidenav/sb-sidenav.component';
+import { RouterModule } from '@angular/router';
 
 const components = [
   SbLangSelectorComponent,
@@ -16,11 +18,12 @@ const components = [
   SbFooterComponent,
   SbSimpleDialogComponent,
   SbBackgroundComponent,
-  SbToolbarComponent
+  SbToolbarComponent,
+  SbSidenavComponent
 ];
 @NgModule({
   declarations: [components],
-  imports: [CommonModule, MaterialModule, TranslateModule, AuthModule],
+  imports: [CommonModule, MaterialModule, TranslateModule, AuthModule, RouterModule],
   exports: [components]
 })
 export class LayoutModule {}

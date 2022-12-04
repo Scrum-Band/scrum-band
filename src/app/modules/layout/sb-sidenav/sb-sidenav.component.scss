@@ -5,9 +5,16 @@
 }
 
 .active-list-item {
-  border-right: 0.5em solid $accent-color;
+  border-right: 0.5em solid $accent-color !important;
 }
 
 .nav-list {
   padding: 0 !important;
+}
+
+.menu-button {
+  border-right: 0.5em solid transparent;
+}
+.bottom-nav {
+  align-self: flex-end;
 }

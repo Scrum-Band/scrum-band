@@ -13,6 +13,7 @@ export class SbSidenavComponent implements OnInit {
     { name: 'character-sheet', icon: 'badge' },
     { name: 'inventory', icon: 'backpack' }
   ];
+  public BOTTOM_MENU = [{ name: 'support', icon: 'volunteer_activism' }];
 
   @Input() smallDisplay: boolean = true;
   @Input() signedIn: boolean = false;

@@ -1,21 +1,15 @@
-<header>
-  <mat-toolbar color="primary" class="app-toolbar">
-    <mat-toolbar-row>
-      <sb-toolbar #sbToolbar [smallDisplay]="smallDisplay" [sidenavOpen]="sidenavOpen" [signedIn]="signedIn">
-      </sb-toolbar>
-    </mat-toolbar-row>
-  </mat-toolbar>
-</header>
-<section>
-  <mat-sidenav-container hasBackdrop="false">
-    <mat-sidenav #sbSidenav mode="side" fixedInViewport opened>
-      <sb-sidenav [smallDisplay]="smallDisplay" [signedIn]="signedIn"></sb-sidenav>
-    </mat-sidenav>
-    <router-outlet></router-outlet>
-  </mat-sidenav-container>
-</section>
-<footer>
-  <!-- <sb-footer></sb-footer> -->
-</footer>
+<mat-toolbar color="primary" class="sb-toolbar">
+  <mat-toolbar-row>
+    <sb-toolbar #sbToolbar [smallDisplay]="smallDisplay" [sidenavOpen]="sidenavOpen" [signedIn]="signedIn">
+    </sb-toolbar>
+  </mat-toolbar-row>
+</mat-toolbar>
+<mat-sidenav-container hasBackdrop="false">
+  <mat-sidenav #sbSidenav mode="side" fixedInViewport opened>
+    <sb-sidenav [smallDisplay]="smallDisplay" [signedIn]="signedIn"></sb-sidenav>
+  </mat-sidenav>
+  <router-outlet></router-outlet>
+</mat-sidenav-container>
+<sb-footer class="sb-footer"></sb-footer>
 
 <sb-background></sb-background>

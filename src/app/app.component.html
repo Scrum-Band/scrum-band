@@ -1,42 +1,16 @@
-<header>
-  <mat-toolbar color="primary" class="app-toolbar fixed">
-    <mat-toolbar-row>
-      <button mat-icon-button (click)="toggle()">
-        <mat-icon *ngIf="!sbSidenav.opened">menu</mat-icon>
-        <mat-icon *ngIf="sbSidenav.opened">close</mat-icon>
-      </button>
-      <img
-        class="pointer"
-        routerLink="/"
-        src="../../../assets/icons/icon-48x48.png"
-        title="Scrum Band"
-        width="24px"
-        alt="Scrum Band logo" />
-      <span class="pointer" routerLink="/" *ngIf="!smallDisplay">Scrum Band</span>
-      <span class="sb-spacer"></span>
-      <sb-light-switcher></sb-light-switcher>
-      <sb-lang-selector></sb-lang-selector>
-      <sb-sign></sb-sign>
-    </mat-toolbar-row>
-  </mat-toolbar>
-</header>
-<section>
-  <mat-sidenav-container hasBackdrop="true">
-    <mat-sidenav #sbSidenav mode="over" fixedInViewport fixedTopGap="64">
-      <mat-action-list>
-        <mat-list-item *ngFor="let link of MENU">
-          <button mat-list-item (click)="toggle()" [routerLink]="link.name">
-            <mat-icon class="menu-icon material-icons-outlined">{{ link.icon }}</mat-icon>
-            {{ link.name | translate | uppercase }}
-          </button>
-        </mat-list-item>
-      </mat-action-list>
-    </mat-sidenav>
-    <router-outlet></router-outlet>
-  </mat-sidenav-container>
-</section>
-<footer>
-  <!-- <sb-footer></sb-footer> -->
-</footer>
+<mat-toolbar color="primary" class="sb-toolbar">
+  <mat-toolbar-row>
+    <sb-toolbar #sbToolbar [smallDisplay]="smallDisplay" [sidenavOpen]="sidenavOpen" [signedIn]="signedIn">
+    </sb-toolbar>
+  </mat-toolbar-row>
+</mat-toolbar>
+<mat-sidenav-container hasBackdrop="false">
+  <mat-sidenav #sbSidenav mode="side" fixedInViewport opened>
+    <sb-sidenav [smallDisplay]="smallDisplay" [signedIn]="signedIn"></sb-sidenav>
+  </mat-sidenav>
+  ​
+  <router-outlet></router-outlet>
+</mat-sidenav-container>
+<sb-footer class="sb-footer"></sb-footer>
 
 <sb-background></sb-background>

@@ -13,10 +13,10 @@
     "on": "Encender las luces",
     "off": "Apagar las luces"
   },
-  "the-adventure": "The adventure",
+  "adventures": "Adventures",
   "game-rules": "Game rules",
   "character-sheet": "Character sheet",
-  "sm-screen": "SM screen",
+  "inventory": "Inventory",
   "impact-calculator": "Impact calculator",
   "feature": {
     "spm": {

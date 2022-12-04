@@ -7,7 +7,7 @@ import { PricingComponent } from './pricing/pricing.component';
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'prefix' },
   { path: 'home', component: HomeComponent },
-  { path: 'the-adventure', component: HomeComponent },
+  { path: 'adventures', component: HomeComponent },
   { path: 'game-rules', component: HomeComponent },
   { path: 'character-sheet', component: HomeComponent },
   { path: 'sm-screen', component: HomeComponent },

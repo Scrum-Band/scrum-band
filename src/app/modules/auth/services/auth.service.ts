@@ -35,38 +35,28 @@ export class AuthService {
         this.errorLogin(error);
       });
   }
-
   signOut() {
     signOut(this.auth);
     this.cleanLocalStorage();
   }
-
   getUserLogged() {
     this.userLogged = JSON.parse(localStorage.getItem('userLogged')!);
     return this.userLogged;
   }
-
   isLoggedIn(): boolean {
     const userLogged = JSON.parse(localStorage.getItem('userLogged')!);
     return userLogged != null && userLogged != undefined ? true : false;
   }
-
+  successLogin(result: any, authProvider: any) {
+    if (result) {
+      this.userLogged = result.user;
+      localStorage.setItem('userLogged', JSON.stringify(this.userLogged));
+    }
+  }
   errorLogin(error: any) {
     this.cleanLocalStorage();
     console.error('errorCode', error.code, 'errorMessage', error.message);
   }
-
-  successLogin(result: any, authProvider: any) {
-    if (result) {
-      const credential = authProvider.credentialFromResult(result);
-      this.userLogged = result.user;
-      localStorage.setItem('userLogged', JSON.stringify(this.userLogged));
-      // Token para llamar a las APIS de google
-      this.tokenAPI = credential.accessToken;
-      localStorage.setItem('tokenAPI', this.tokenAPI);
-    }
-  }
-
   cleanLocalStorage() {
     localStorage.setItem('userLogged', 'null');
     localStorage.setItem('tokenAPI', 'null');

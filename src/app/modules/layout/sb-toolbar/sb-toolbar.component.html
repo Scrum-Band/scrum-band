@@ -1,0 +1,20 @@
+<div class="sb-toolbar">
+  <button mat-icon-button *ngIf="smallDisplay" (click)="toggleSidenav()">
+    <mat-icon *ngIf="!sidenavOpen">menu</mat-icon>
+    <mat-icon *ngIf="sidenavOpen">close</mat-icon>
+  </button>
+  <img
+    *ngIf="!smallDisplay"
+    class="pointer"
+    routerLink="/"
+    src="../../../assets/icons/icon-48x48.png"
+    title="Scrum Band"
+    width="24px"
+    height="24px"
+    alt="Scrum Band logo" />
+  <span class="pointer" routerLink="/">Scrum Band</span>
+  <span class="sb-spacer"></span>
+  <sb-light-switcher *ngIf="!signedIn"></sb-light-switcher>
+  <sb-lang-selector *ngIf="!signedIn"></sb-lang-selector>
+  <sb-sign></sb-sign>
+</div>

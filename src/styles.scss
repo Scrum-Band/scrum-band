@@ -1,19 +1,13 @@
 @import 'assets/theming/theming';
 @import 'assets/theming/variables';
-* {
-  text-decoration: none;
-  :visited {
-    text-decoration: none;
-  }
-}
+
 html,
 body {
-  margin: 0;
   font-family: Roboto, 'Helvetica Neue', sans-serif;
   overflow: auto;
 }
 body {
-  margin-top: 64px;
+  margin: 0;
 }
 .postit {
   position: absolute;
@@ -26,16 +20,34 @@ body {
 .pointer {
   cursor: pointer;
 }
-.app-toolbar {
-  top: 0;
-  z-index: 1000;
+
+.sb-spacer {
+  flex: 1 1 auto;
+}
+.mat-list-item-content {
+  padding: 0 !important;
 }
 .secondary-toolbar {
-  top: 64px;
+  top: $toolbar-height;
   z-index: 1000;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+@media (min-width: 1200px) {
+  .secondary-toolbar {
+    width: calc(100% - 300px) !important;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
 }
 footer {
   width: 100%;
+}
+mat-toolbar,
+mat-toolbar-row {
+  height: $toolbar-height !important;
+  min-height: $toolbar-height !important;
+  padding: 0 !important;
 }
 mat-card {
   margin: 1rem;
@@ -172,13 +184,3 @@ mat-card-content {
     );
   }
 }
-
-.sb-spacer {
-  flex: 1 1 auto;
-}
-
-// .mat-drawer-inner-container {
-//   min-width: 85vw !important;
-//   width: 85vw !important;
-//   max-width: 85vw !important;
-// }

@@ -1,17 +1,18 @@
 @import '../../../../../assets/theming/variables';
 
 mat-drawer-container {
-  width: 100vw;
-  height: calc(100vh - 64px);
+  margin-top: $toolbar-height;
+  width: 100%;
+  height: calc(100vh - $toolbar-height);
   mat-drawer {
-    width: 40vw;
+    width: 40%;
     mat-list-option {
       display: flex;
       justify-content: flex-end;
     }
   }
   mat-drawer-content {
-    width: 60vw;
+    width: 60%;
     padding: 1em;
   }
 }

@@ -1,0 +1,20 @@
+@import '../../../../assets/theming/variables';
+.menu-icon {
+  margin-right: 1em;
+  margin-left: 1em;
+}
+
+.active-list-item {
+  border-right: 0.5em solid $accent-color !important;
+}
+
+.nav-list {
+  padding: 0 !important;
+}
+
+.menu-button {
+  border-right: 0.5em solid transparent;
+}
+.bottom-nav {
+  align-self: flex-end;
+}

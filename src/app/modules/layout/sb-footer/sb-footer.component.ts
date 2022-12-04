@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { Network } from '@ngx-pwa/offline';
 
 @Component({
   selector: 'sb-footer',
@@ -7,7 +8,10 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SbFooterComponent implements OnInit {
-  constructor() {}
+  public online$;
+  constructor(public network: Network) {
+    this.online$ = this.network.onlineChanges;
+  }
 
   ngOnInit(): void {}
 }

@@ -38,7 +38,8 @@
 </mat-grid-list> -->
 
 <mat-toolbar class="sb-footer">
-  <span>Footer</span>
+  <mat-icon class="ntwrk-status" *ngIf="online$ | async" color="accent">wifi</mat-icon>​
+  <mat-icon class="ntwrk-status" *ngIf="!(online$ | async)" color="warn">wifi_off</mat-icon>​
   <span class="sb-spacer"></span>
   <sb-lang-selector class="footer-icon"></sb-lang-selector>
   <sb-light-switcher class="footer-icon"></sb-light-switcher>

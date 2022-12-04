@@ -1,6 +1,7 @@
 import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 import { AfterViewInit, Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
+import { Network } from '@ngx-pwa/offline';
 import { TranslateService } from '@ngx-translate/core';
 import { AuthService } from './modules/auth/services/auth.service';
 import { SbToolbarComponent } from './modules/layout/sb-toolbar/sb-toolbar.component';
@@ -16,6 +17,7 @@ export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
   public smallDisplay: boolean = true;
   public sidenavOpen: boolean = true;
   public signedIn: boolean = false;
+  public online$;
 
   @ViewChild('sbSidenav') sbSidenav!: MatSidenav;
   @ViewChild('sbToolbar') sbToolbar!: SbToolbarComponent;
@@ -24,8 +26,11 @@ export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
     private breakpointObserver: BreakpointObserver,
     public translate: TranslateService,
     public authService: AuthService,
-    private lang: LanguageService
-  ) {}
+    private lang: LanguageService,
+    public network: Network
+  ) {
+    this.online$ = this.network.onlineChanges;
+  }
   ngOnInit(): void {
     this.lang.initLang();
     this.authService.onAuthStateChanged.subscribe((userLogged: any) => {

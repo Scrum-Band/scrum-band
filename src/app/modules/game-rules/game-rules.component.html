@@ -1,0 +1,15 @@
+<mat-card class="animated-box in mat-card-glass" style="width: 80%">
+  <mat-card-title>{{ 'game-rules' | translate }}</mat-card-title>
+  <div class="container">
+    <div *ngFor="let book of books; let i = index" [routerLink]="book.url" class="book">
+      <div class="title">
+        <p>{{ book.title }}</p>
+      </div>
+      <div [ngClass]="'book-cover cover' + (i + 1)">
+        <div class="effect"></div>
+        <div class="light"></div>
+      </div>
+      <div class="book-inside"></div>
+    </div>
+  </div>
+</mat-card>

@@ -1,14 +1,14 @@
 <mat-toolbar color="primary" class="fixed secondary-toolbar">
   <mat-toolbar-row>
-    <span>{{ 'scrum-guide.intro.subtitle' | translate }}</span>
+    <span class="secondary-toolbar-title">{{ 'scrum-guide.intro.subtitle' | translate }}</span>
     <span class="sb-spacer"></span>
-    <button mat-icon-button (click)="drawer.toggle()">
+    <button class="secondary-toolbar-toggler" mat-icon-button (click)="drawer.toggle()">
       <mat-icon>search</mat-icon>
     </button>
   </mat-toolbar-row>
 </mat-toolbar>
 <mat-sidenav-container autosize hasBackdrop="true">
-  <mat-sidenav #drawer mode="over" position="end" fixedInViewport fixedTopGap="128">
+  <mat-sidenav #drawer mode="over" position="end" fixedInViewport fixedTopGap="75" [ngClass]="'sb-sg-drawer'">
     <mat-action-list>
       <mat-list-item *ngFor="let link of MENU">
         <button

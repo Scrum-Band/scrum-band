@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LanguageService } from '../../../services/language.service';
+import { LanguageService } from '../../../../services/language.service';
 
 @Component({
   selector: 'sb-lang-selector',

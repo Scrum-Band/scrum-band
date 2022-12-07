@@ -1,5 +1,5 @@
-import { ChangeDetectionStrategy, Component, OnInit, ChangeDetectorRef, AfterContentChecked } from '@angular/core';
-import { Auth } from '@angular/fire/auth';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { Observable } from 'rxjs';
 import { AuthService } from '../../services/auth.service';
 
 @Component({
@@ -8,26 +8,19 @@ import { AuthService } from '../../services/auth.service';
   styleUrls: ['./sign.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class SignComponent implements OnInit, AfterContentChecked {
-  userLogged: any;
+export class SignComponent {
+  public signedUser: any;
+  public isSigned$: Observable<any>;
 
-  constructor(private changeDetector: ChangeDetectorRef, private authService: AuthService) {
-    this.authService.onAuthStateChanged.subscribe((userLogged) => {
-      this.userLogged = userLogged;
-    });
-  }
-
-  ngOnInit(): void {
-    this.userLogged = this.authService.getUserLogged();
-  }
-  ngAfterContentChecked(): void {
-    this.changeDetector.detectChanges();
+  constructor(private auth: AuthService) {
+    this.isSigned$ = this.auth.isSigned();
+    this.auth.signedUser().subscribe((signedUser) => (this.signedUser = signedUser));
   }
 
   signIn() {
-    this.authService.signIn();
+    this.auth.signIn();
   }
   signOut() {
-    this.authService.signOut();
+    this.auth.signOut();
   }
 }

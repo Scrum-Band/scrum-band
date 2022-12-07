@@ -1,3 +1,5 @@
+@import '../../../../assets/theming/variables';
+
 mat-drawer-container {
   padding: 1em;
 }
@@ -5,7 +7,16 @@ mat-drawer-container {
 mat-drawer {
   padding: 1em;
 }
-
+.sb-sg-menu {
+  padding-left: 2em;
+  padding-right: 2em;
+}
 .sb-sg-submenu {
-  padding-left: 1em;
+  padding-left: 4em;
+  padding-right: 2em;
+}
+
+.sb-sg-drawer {
+  margin-top: calc($toolbar-height/2);
+  margin-bottom: calc($toolbar-height/2);
 }

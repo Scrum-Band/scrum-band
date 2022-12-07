@@ -1,14 +1,12 @@
 <mat-toolbar color="primary" class="sb-toolbar">
   <mat-toolbar-row>
-    <sb-toolbar #sbToolbar [smallDisplay]="smallDisplay" [sidenavOpen]="sidenavOpen" [signedIn]="signedIn">
-    </sb-toolbar>
+    <sb-toolbar #sbToolbar [sidenavOpen]="sidenavOpen"> </sb-toolbar>
   </mat-toolbar-row>
 </mat-toolbar>
 <mat-sidenav-container hasBackdrop="false">
   <mat-sidenav #sbSidenav mode="side" fixedInViewport opened>
-    <sb-sidenav [smallDisplay]="smallDisplay" [signedIn]="signedIn"></sb-sidenav>
+    <sb-sidenav></sb-sidenav>
   </mat-sidenav>
-  ​
   <router-outlet></router-outlet>
 </mat-sidenav-container>
 <sb-footer class="sb-footer"></sb-footer>

@@ -9,17 +9,21 @@ const routes: Routes = [
     redirectTo: 'dashboard'
   },
   {
-    path: 'dashboard',
-    canActivate: [AuthGuard],
-    loadChildren: () => import('./modules/dashboard/dashboard.module').then((m) => m.DashboardModule)
-  },
-  {
     path: 'www',
     loadChildren: () => import('./modules/public/public.module').then((m) => m.PublicModule)
   },
   {
+    path: 'game-rules',
+    loadChildren: () => import('./modules/game-rules/game-rules.module').then((m) => m.GameRulesModule)
+  },
+  {
     path: 'scrum-guide',
     loadChildren: () => import('./modules/scrum-guide/scrum-guide.module').then((m) => m.ScrumGuideModule)
+  },
+  {
+    path: 'dashboard',
+    canActivate: [AuthGuard],
+    loadChildren: () => import('./modules/dashboard/dashboard.module').then((m) => m.DashboardModule)
   },
   {
     path: 'settings',
